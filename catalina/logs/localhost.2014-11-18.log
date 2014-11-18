@@ -1,0 +1,715 @@
+Nov 18, 2014 12:56:39 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /register.jsp
+String literal is not properly closed by a double-quote
+62: 	        //select the user table from the underlying db and validate the user name and password
+63:         	Statement stmt = null;
+64: 	        ResultSet rset = null;
+65: 		String sql = "insert into users values('userName', 
+66: 		
+67: 
+68: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 18, 2014 1:04:59 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /register.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+62: 	        //select the user table from the underlying db and validate the user name and password
+63:         	Statement stmt = null;
+64: 	        ResultSet rset = null;
+65: 		String sql = "insert into users values(userName, passwd, null);"
+66: 
+67: 	        //out.println(sql);
+68: 
+
+
+An error occurred at line: 71 in the jsp file: /register.jsp
+The method executeUpdate(String) in the type Statement is not applicable for the arguments ()
+68: 
+69:         	try{
+70: 	        	stmt = conn.createStatement();
+71: 		        stmt.executeUpdate();
+72: 			stm.exexuteUpdate("commit";
+73:         	}
+74: 	
+
+
+An error occurred at line: 72 in the jsp file: /register.jsp
+stm cannot be resolved
+69:         	try{
+70: 	        	stmt = conn.createStatement();
+71: 		        stmt.executeUpdate();
+72: 			stm.exexuteUpdate("commit";
+73:         	}
+74: 	
+75: 	        catch(Exception ex){
+
+
+An error occurred at line: 72 in the jsp file: /register.jsp
+Syntax error, insert ")" to complete Expression
+69:         	try{
+70: 	        	stmt = conn.createStatement();
+71: 		        stmt.executeUpdate();
+72: 			stm.exexuteUpdate("commit";
+73:         	}
+74: 	
+75: 	        catch(Exception ex){
+
+
+An error occurred at line: 81 in the jsp file: /register.jsp
+Duplicate local variable sql
+78: 
+79: 
+80: 
+81: 		String sql = "insert into persons values(userName, passwd, fname, lname, address, email, pnum);"
+82: 
+83: 	        //out.println(sql);
+84: 
+
+
+An error occurred at line: 81 in the jsp file: /register.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+78: 
+79: 
+80: 
+81: 		String sql = "insert into persons values(userName, passwd, fname, lname, address, email, pnum);"
+82: 
+83: 	        //out.println(sql);
+84: 
+
+
+An error occurred at line: 87 in the jsp file: /register.jsp
+The method executeUpdate(String) in the type Statement is not applicable for the arguments ()
+84: 
+85:         	try{
+86: 	        	stmt = conn.createStatement();
+87: 		        stmt.executeUpdate();
+88: 			stm.exexuteUpdate("commit";
+89:         	}
+90: 	
+
+
+An error occurred at line: 88 in the jsp file: /register.jsp
+stm cannot be resolved
+85:         	try{
+86: 	        	stmt = conn.createStatement();
+87: 		        stmt.executeUpdate();
+88: 			stm.exexuteUpdate("commit";
+89:         	}
+90: 	
+91: 	        catch(Exception ex){
+
+
+An error occurred at line: 88 in the jsp file: /register.jsp
+Syntax error, insert ")" to complete Expression
+85:         	try{
+86: 	        	stmt = conn.createStatement();
+87: 		        stmt.executeUpdate();
+88: 			stm.exexuteUpdate("commit";
+89:         	}
+90: 	
+91: 	        catch(Exception ex){
+
+
+An error occurred at line: 108 in the jsp file: /register.jsp
+PrintWriter cannot be resolved to a type
+105: 
+106: 		//Output response to the client
+107: 		response.setContentType("text/html");
+108: 		PrintWriter out = response.getWriter();
+109: 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " +
+110: 		"Transitional//EN\">\n" +
+111: 		"<HTML>\n" +
+
+
+An error occurred at line: 108 in the jsp file: /register.jsp
+Duplicate local variable out
+105: 
+106: 		//Output response to the client
+107: 		response.setContentType("text/html");
+108: 		PrintWriter out = response.getWriter();
+109: 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " +
+110: 		"Transitional//EN\">\n" +
+111: 		"<HTML>\n" +
+
+
+An error occurred at line: 122 in the jsp file: /register.jsp
+Syntax error on token "else", finally expected
+119: 
+120: 
+121:         }
+122:         else
+123:         {
+124:                 out.println("<form method=post action=login.jsp>");
+125:                 out.println("UserName: <input type=text name=USERID maxlength=20><br>");
+
+
+An error occurred at line: 191 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 193 in the generated java file
+out cannot be resolved to a variable
+
+An error occurred at line: 193 in the generated java file
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: 194 in the generated java file
+out cannot be resolved to a variable
+
+An error occurred at line: 194 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 195 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 196 in the generated java file
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: 196 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 198 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 199 in the generated java file
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 18, 2014 1:09:38 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /register.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+62: 	        //select the user table from the underlying db and validate the user name and password
+63:         	Statement stmt = null;
+64: 	        ResultSet rset = null;
+65: 		String sql = "insert into users values(userName, passwd, null);"
+66: 
+67: 	        //out.println(sql);
+68: 
+
+
+An error occurred at line: 71 in the jsp file: /register.jsp
+The method executeUpdate(String) in the type Statement is not applicable for the arguments ()
+68: 
+69:         	try{
+70: 	        	stmt = conn.createStatement();
+71: 		        stmt.executeUpdate();
+72: 			stm.exexuteUpdate("commit");
+73:         	}
+74: 	
+
+
+An error occurred at line: 72 in the jsp file: /register.jsp
+stm cannot be resolved
+69:         	try{
+70: 	        	stmt = conn.createStatement();
+71: 		        stmt.executeUpdate();
+72: 			stm.exexuteUpdate("commit");
+73:         	}
+74: 	
+75: 	        catch(Exception ex){
+
+
+An error occurred at line: 80 in the jsp file: /register.jsp
+Duplicate local variable sql
+77:         	}
+78: 
+79: 
+80: 		String sql = "insert into persons values(userName, passwd, fname, lname, address, email, pnum);"
+81: 
+82: 	        //out.println(sql);
+83: 
+
+
+An error occurred at line: 80 in the jsp file: /register.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+77:         	}
+78: 
+79: 
+80: 		String sql = "insert into persons values(userName, passwd, fname, lname, address, email, pnum);"
+81: 
+82: 	        //out.println(sql);
+83: 
+
+
+An error occurred at line: 86 in the jsp file: /register.jsp
+The method executeUpdate(String) in the type Statement is not applicable for the arguments ()
+83: 
+84:         	try{
+85: 	        	stmt = conn.createStatement();
+86: 		        stmt.executeUpdate();
+87: 			stm.exexuteUpdate("commit");
+88:         	}
+89: 	
+
+
+An error occurred at line: 87 in the jsp file: /register.jsp
+stm cannot be resolved
+84:         	try{
+85: 	        	stmt = conn.createStatement();
+86: 		        stmt.executeUpdate();
+87: 			stm.exexuteUpdate("commit");
+88:         	}
+89: 	
+90: 	        catch(Exception ex){
+
+
+An error occurred at line: 107 in the jsp file: /register.jsp
+PrintWriter cannot be resolved to a type
+104: 
+105: 		//Output response to the client
+106: 		response.setContentType("text/html");
+107: 		PrintWriter out = response.getWriter();
+108: 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " +
+109: 		"Transitional//EN\">\n" +
+110: 		"<HTML>\n" +
+
+
+An error occurred at line: 107 in the jsp file: /register.jsp
+Duplicate local variable out
+104: 
+105: 		//Output response to the client
+106: 		response.setContentType("text/html");
+107: 		PrintWriter out = response.getWriter();
+108: 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " +
+109: 		"Transitional//EN\">\n" +
+110: 		"<HTML>\n" +
+
+
+An error occurred at line: 121 in the jsp file: /register.jsp
+Syntax error on token "else", finally expected
+118: 
+119: 
+120:         }
+121:         else
+122:         {
+123:                 out.println("<form method=post action=login.jsp>");
+124:                 out.println("UserName: <input type=text name=USERID maxlength=20><br>");
+
+
+An error occurred at line: 190 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 192 in the generated java file
+out cannot be resolved to a variable
+
+An error occurred at line: 192 in the generated java file
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: 193 in the generated java file
+out cannot be resolved to a variable
+
+An error occurred at line: 193 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 194 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 195 in the generated java file
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: 195 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 197 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 198 in the generated java file
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 18, 2014 1:11:11 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 71 in the jsp file: /register.jsp
+The method executeUpdate(String) in the type Statement is not applicable for the arguments ()
+68: 
+69:         	try{
+70: 	        	stmt = conn.createStatement();
+71: 		        stmt.executeUpdate();
+72:         	}
+73: 	
+74: 	        catch(Exception ex){
+
+
+An error occurred at line: 79 in the jsp file: /register.jsp
+Duplicate local variable sql
+76:         	}
+77: 
+78: 
+79: 		String sql = "insert into persons values(userName, passwd, fname, lname, address, email, pnum);";
+80: 
+81: 	        //out.println(sql);
+82: 
+
+
+An error occurred at line: 85 in the jsp file: /register.jsp
+The method executeUpdate(String) in the type Statement is not applicable for the arguments ()
+82: 
+83:         	try{
+84: 	        	stmt = conn.createStatement();
+85: 		        stmt.executeUpdate();
+86:         	}
+87: 	
+88: 	        catch(Exception ex){
+
+
+An error occurred at line: 105 in the jsp file: /register.jsp
+PrintWriter cannot be resolved to a type
+102: 
+103: 		//Output response to the client
+104: 		response.setContentType("text/html");
+105: 		PrintWriter out = response.getWriter();
+106: 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " +
+107: 		"Transitional//EN\">\n" +
+108: 		"<HTML>\n" +
+
+
+An error occurred at line: 105 in the jsp file: /register.jsp
+Duplicate local variable out
+102: 
+103: 		//Output response to the client
+104: 		response.setContentType("text/html");
+105: 		PrintWriter out = response.getWriter();
+106: 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 " +
+107: 		"Transitional//EN\">\n" +
+108: 		"<HTML>\n" +
+
+
+An error occurred at line: 119 in the jsp file: /register.jsp
+Syntax error on token "else", finally expected
+116: 
+117: 
+118:         }
+119:         else
+120:         {
+121:                 out.println("<form method=post action=login.jsp>");
+122:                 out.println("UserName: <input type=text name=USERID maxlength=20><br>");
+
+
+An error occurred at line: 188 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 190 in the generated java file
+out cannot be resolved to a variable
+
+An error occurred at line: 190 in the generated java file
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: 191 in the generated java file
+out cannot be resolved to a variable
+
+An error occurred at line: 191 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 192 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 193 in the generated java file
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: 193 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 195 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 196 in the generated java file
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 18, 2014 1:14:07 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 65 in the jsp file: /register.jsp
+Syntax error on token ""insert into users values(userName, passwd, null);"", invalid Name
+62: 	        //select the user table from the underlying db and validate the user name and password
+63:         	Statement stmt = null;
+64: 	        ResultSet rset = null;
+65: 		String sql = "insert into users values(userName, passwd, null);" (userName, passwd, null);
+66: 
+67: 	        //out.println(sql);
+68: 
+
+
+An error occurred at line: 71 in the jsp file: /register.jsp
+The method executeUpdate(String) in the type Statement is not applicable for the arguments ()
+68: 
+69:         	try{
+70: 	        	stmt = conn.createStatement();
+71: 		        stmt.executeUpdate();
+72:         	}
+73: 	
+74: 	        catch(Exception ex){
+
+
+An error occurred at line: 79 in the jsp file: /register.jsp
+Duplicate local variable sql
+76:         	}
+77: 
+78: 
+79: 		String sql = "insert into persons values(userName, passwd, fname, lname, address, email, pnum);";
+80: 
+81: 	        //out.println(sql);
+82: 
+
+
+An error occurred at line: 85 in the jsp file: /register.jsp
+The method executeUpdate(String) in the type Statement is not applicable for the arguments ()
+82: 
+83:         	try{
+84: 	        	stmt = conn.createStatement();
+85: 		        stmt.executeUpdate();
+86:         	}
+87: 	
+88: 	        catch(Exception ex){
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 18, 2014 1:16:55 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 64 in the jsp file: /register.jsp
+Syntax error on token ""insert into users values(\'?\', \'?\', ?);"", invalid Name
+61: 
+62: 	        //select the user table from the underlying db and validate the user name and password
+63:         	PreparedStatement stmt = null;
+64: 		String sql = "insert into users values('?', '?', ?);" (userName, passwd, null);
+65: 
+66: 	        //out.println(sql);
+67: 
+
+
+An error occurred at line: 78 in the jsp file: /register.jsp
+Duplicate local variable sql
+75:         	}
+76: 
+77: 
+78: 		String sql = "insert into persons values(userName, passwd, fname, lname, address, email, pnum);";
+79: 
+80: 	        //out.println(sql);
+81: 
+
+
+An error occurred at line: 83 in the jsp file: /register.jsp
+Type mismatch: cannot convert from Statement to PreparedStatement
+80: 	        //out.println(sql);
+81: 
+82:         	try{
+83: 	        	stmt = conn.createStatement();
+84: 		        stmt.executeUpdate();
+85:         	}
+86: 	
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 18, 2014 1:18:49 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 70 in the jsp file: /register.jsp
+Type mismatch: cannot convert from Statement to PreparedStatement
+67: 	        //out.println(sql);
+68: 
+69:         	try{
+70: 	        	stmt = conn.createStatement();
+71: 		        stmt.executeUpdate();
+72:         	}
+73: 	
+
+
+An error occurred at line: 79 in the jsp file: /register.jsp
+Duplicate local variable sql
+76:         	}
+77: 
+78: 
+79: 		String sql = "insert into persons values(userName, passwd, fname, lname, address, email, pnum);";
+80: 
+81: 	        //out.println(sql);
+82: 
+
+
+An error occurred at line: 84 in the jsp file: /register.jsp
+Type mismatch: cannot convert from Statement to PreparedStatement
+81: 	        //out.println(sql);
+82: 
+83:         	try{
+84: 	        	stmt = conn.createStatement();
+85: 		        stmt.executeUpdate();
+86:         	}
+87: 	
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
