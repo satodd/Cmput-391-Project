@@ -6,11 +6,11 @@
  version="2.4">
 
     <servlet>
-        <servlet-name>UploadImageLogicSQL</servlet-name>
-        <servlet-class>UploadImageLogicSQL</servlet-class>
+        <servlet-name>UploadImage</servlet-name>
+        <servlet-class>UploadImage</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UploadImageLogicSQL</servlet-name>
+        <servlet-name>UploadImage</servlet-name>
         <url-pattern>/upload</url-pattern>
     </servlet-mapping>
 

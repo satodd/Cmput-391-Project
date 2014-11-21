@@ -16,7 +16,7 @@ Image Upload
 </header>
 <hr>
 Please input or select the path of the image!
-<form name="upload-image" method="POST" enctype="multipart/form-data" action="upload" style="text-align:-moz-center;">
+<form name="upload-image" method="POST" enctype="multipart/form-data" action="upload">
 
 <table>
   <tr>
@@ -29,19 +29,33 @@ Please input or select the path of the image!
 			<TABLE>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Place:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="place" VALUE="place"><BR></TD>
+					<TD><INPUT TYPE="text" NAME="place"><BR></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Date:</I></B></TD>
-					<TD><INPUT TYPE="password" NAME="PASSWD" VALUE="password"></TD>
+					<TD><INPUT TYPE="date" NAME="timing"></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Subject:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="FNAME" VALUE="first name"></TD>
+					<TD><INPUT TYPE="text" NAME="subject"></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
+					<TD><B><I>Description:</I></B></TD>
+					<TD><TEXTAREA style="resize:none;" NAME="desc"></TEXTAREA></TD>
+				</TR>
+
+				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Access:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="LNAME" VALUE="last name"></TD>
+					<TD>
+						<select name="permitted">
+							<option value="2">Private</option>
+							<!-- 
+							each(group)
+								<option value="{{group.id}}">{{group.name}}</option>
+							-->
+					    	<option value="1">Public</option>
+						</select>
+					</TD>
 				</TR>
 			</TABLE>
 		</CENTER>
