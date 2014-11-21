@@ -1,0 +1,632 @@
+Nov 20, 2014 11:48:41 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 11:48:41 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 11:48:41 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 778 ms
+Nov 20, 2014 11:48:41 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 11:48:41 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 11:48:41 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 11:48:42 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 11:48:42 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 11:48:42 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 11:48:42 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/30  config=null
+Nov 20, 2014 11:48:42 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 600 ms
+Nov 20, 2014 12:03:44 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:03:45 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 12:03:45 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 12:03:45 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:08:06 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 12:08:07 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:08:07 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 373 ms
+Nov 20, 2014 12:08:07 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 12:08:07 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 12:08:07 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 12:08:07 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 12:08:07 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:08:07 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 12:08:07 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 12:08:07 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 220 ms
+Nov 20, 2014 12:10:46 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:10:47 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 12:10:47 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:14:21 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 12:14:21 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:14:21 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 334 ms
+Nov 20, 2014 12:14:21 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 12:14:21 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 12:14:21 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 12:14:22 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 12:14:22 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:14:22 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 12:14:22 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/10  config=null
+Nov 20, 2014 12:14:22 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 237 ms
+Nov 20, 2014 12:55:57 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:55:58 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 12:55:58 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 12:55:59 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:56:00 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 12:56:00 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:56:00 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 327 ms
+Nov 20, 2014 12:56:00 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 12:56:00 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 12:56:00 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 12:56:00 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 12:56:01 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 12:56:01 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:56:01 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 12:56:01 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 12:56:01 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 209 ms
+Nov 20, 2014 12:57:09 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:57:10 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 12:57:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 12:57:10 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:57:12 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 12:57:12 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:57:12 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 330 ms
+Nov 20, 2014 12:57:12 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 12:57:12 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 12:57:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 12:57:13 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 12:57:13 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 12:57:13 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:57:13 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 12:57:13 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 12:57:13 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 218 ms
+Nov 20, 2014 12:58:09 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:58:10 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 12:58:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 12:58:10 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:58:16 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 12:58:16 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:58:16 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 330 ms
+Nov 20, 2014 12:58:16 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 12:58:16 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 12:58:16 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 12:58:16 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 12:58:16 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 12:58:16 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 12:58:16 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 12:58:16 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 12:58:16 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 215 ms
+Nov 20, 2014 1:00:09 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:00:10 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:00:10 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:00:10 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:00:11 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:00:12 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:00:12 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 337 ms
+Nov 20, 2014 1:00:12 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:00:12 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:00:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:00:12 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:00:12 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:00:12 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:00:12 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:00:12 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/12  config=null
+Nov 20, 2014 1:00:12 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 239 ms
+Nov 20, 2014 1:01:02 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:01:03 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:01:03 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:01:03 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:01:08 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:01:09 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:01:09 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 326 ms
+Nov 20, 2014 1:01:09 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:01:09 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:01:09 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:01:09 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:01:09 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:01:09 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:01:09 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:01:09 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 1:01:09 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 212 ms
+Nov 20, 2014 1:04:42 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:04:43 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:04:43 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:04:43 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:11:59 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:11:59 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:11:59 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 350 ms
+Nov 20, 2014 1:11:59 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:11:59 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:11:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:11:59 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:11:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:11:59 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:11:59 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:11:59 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 1:11:59 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 219 ms
+Nov 20, 2014 1:15:05 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:15:06 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:15:06 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:15:06 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:15:25 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:15:25 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:15:25 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 328 ms
+Nov 20, 2014 1:15:25 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:15:25 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:15:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:15:25 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:15:25 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:15:25 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:15:25 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:15:25 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 1:15:25 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 224 ms
+Nov 20, 2014 1:16:53 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:16:54 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:16:54 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:16:54 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:17:02 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:17:02 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:17:02 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 330 ms
+Nov 20, 2014 1:17:02 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:17:02 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:17:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:17:02 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:17:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:17:02 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:17:02 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:17:02 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 1:17:02 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 211 ms
+Nov 20, 2014 1:18:03 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:18:04 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:18:04 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:18:04 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:18:05 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:18:06 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:18:06 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 331 ms
+Nov 20, 2014 1:18:06 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:18:06 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:18:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:18:06 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:18:06 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:18:06 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:18:06 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:18:06 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 1:18:06 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 223 ms
+Nov 20, 2014 1:29:10 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:29:11 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:29:11 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:29:11 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:29:17 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:29:18 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:29:18 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 332 ms
+Nov 20, 2014 1:29:18 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:29:18 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:29:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:29:18 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:29:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:29:18 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:29:18 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:29:18 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/10  config=null
+Nov 20, 2014 1:29:18 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 215 ms
+Nov 20, 2014 1:30:07 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:30:08 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:30:08 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:30:08 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:30:19 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:30:19 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:30:19 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 334 ms
+Nov 20, 2014 1:30:19 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:30:19 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:30:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:30:19 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:30:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:30:19 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:30:19 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:30:19 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 1:30:19 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 240 ms
+Nov 20, 2014 1:32:37 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:32:38 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:32:38 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:32:38 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:32:47 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:32:47 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:32:47 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 344 ms
+Nov 20, 2014 1:32:47 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:32:47 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:32:47 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:32:47 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:32:47 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:32:47 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:32:47 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:32:47 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/12  config=null
+Nov 20, 2014 1:32:47 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 214 ms
+Nov 20, 2014 1:35:36 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:35:37 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:35:37 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:35:37 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:35:42 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:35:42 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:35:42 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 337 ms
+Nov 20, 2014 1:35:42 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:35:42 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:35:42 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:35:42 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:35:43 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:35:43 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:35:43 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:35:43 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 1:35:43 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 222 ms
+Nov 20, 2014 1:37:23 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:37:24 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:37:24 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:37:24 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:37:32 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:37:32 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:37:32 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 343 ms
+Nov 20, 2014 1:37:32 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:37:32 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:37:32 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:37:32 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:37:32 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:37:32 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:37:32 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:37:32 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 1:37:32 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 213 ms
+Nov 20, 2014 1:39:22 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:39:23 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:39:23 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:39:23 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:39:24 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:39:24 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:39:24 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 331 ms
+Nov 20, 2014 1:39:24 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:39:24 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:39:24 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:39:24 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:39:24 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:39:24 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:39:24 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:39:24 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+Nov 20, 2014 1:39:24 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 213 ms
+Nov 20, 2014 1:43:27 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:43:28 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:43:28 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:43:29 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:45:18 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:45:18 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:45:18 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 330 ms
+Nov 20, 2014 1:45:18 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:45:18 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:45:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:45:18 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:45:18 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:45:18 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:45:18 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:45:18 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/10  config=null
+Nov 20, 2014 1:45:18 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 225 ms
+Nov 20, 2014 1:47:06 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:47:07 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:47:07 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:47:08 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:47:10 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/oracle/lib:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+Nov 20, 2014 1:47:10 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:47:10 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 330 ms
+Nov 20, 2014 1:47:10 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Nov 20, 2014 1:47:10 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.35
+Nov 20, 2014 1:47:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory proj1
+Nov 20, 2014 1:47:10 PM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(/cshome/satodd/catalina/webapps/proj1/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Nov 20, 2014 1:47:10 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Nov 20, 2014 1:47:10 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:47:10 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Nov 20, 2014 1:47:10 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/10  config=null
+Nov 20, 2014 1:47:10 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 211 ms
+Nov 20, 2014 1:47:52 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 20, 2014 1:47:53 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 20, 2014 1:47:53 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 20, 2014 1:47:53 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460

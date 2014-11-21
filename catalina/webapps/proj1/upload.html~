@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+
+
+<TITLE>Upload</TITLE>
+</HEAD>
+<BODY>
+
+<title>Upload image</title> 
+<header>
+<h1>
+<center>
+Image Upload
+</center>
+</h1>
+</header>
+<hr>
+Please input or select the path of the image!
+<form name="upload-image" method="POST" enctype="multipart/form-data" action="upload" style="text-align:-moz-center;">
+
+<table>
+  <tr>
+    <th>File path: </th>
+    <td><input name="file-path" type="file" size="30" ></input></td>
+  </tr>
+
+<!-- -providing some required information, including a unique user name, password, first name, last name, address, email, and phone number -->
+		<CENTER>
+			<TABLE>
+				<TR VALIGN=TOP ALIGN=CENTER>
+					<TD><B><I>Place:</I></B></TD>
+					<TD><INPUT TYPE="text" NAME="place" VALUE="place"><BR></TD>
+				</TR>
+				<TR VALIGN=TOP ALIGN=CENTER>
+					<TD><B><I>Date:</I></B></TD>
+					<TD><INPUT TYPE="password" NAME="PASSWD" VALUE="password"></TD>
+				</TR>
+				<TR VALIGN=TOP ALIGN=CENTER>
+					<TD><B><I>Subject:</I></B></TD>
+					<TD><INPUT TYPE="text" NAME="FNAME" VALUE="first name"></TD>
+				</TR>
+				<TR VALIGN=TOP ALIGN=CENTER>
+					<TD><B><I>Access:</I></B></TD>
+					<TD><INPUT TYPE="text" NAME="LNAME" VALUE="last name"></TD>
+				</TR>
+			</TABLE>
+		</CENTER>
+
+	  <tr>
+    <td ALIGN=CENTER COLSPAN="2"><input type="submit" name=".submit" 
+     value="Upload"></td>
+  </tr>
+
+	</body>
+</HTML>

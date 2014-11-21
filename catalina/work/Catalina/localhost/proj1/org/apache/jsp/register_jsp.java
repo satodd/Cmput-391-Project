@@ -55,7 +55,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<HEAD>\n");
       out.write("\n");
       out.write("\n");
-      out.write("<TITLE>Your Login Result</TITLE>\n");
+      out.write("<TITLE>Registration Results</TITLE>\n");
       out.write("</HEAD>\n");
       out.write("\n");
       out.write("<BODY>\n");
@@ -66,22 +66,18 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
  
 
-        if(request.getParameter("Submit") != null)
+        if(request.getParameter("CREATE") != null)
         {
 
-	        //get the user input from the login page
+	        //get the user input from the register page
         	String userName = (request.getParameter("USERID")).trim();
 	        String passwd = (request.getParameter("PASSWD")).trim();
-		String fname = (request.getParameter("FNAME")).trim();
-		String lname = (request.getParameter("LNAME")).trim();
-		String address = (request.getParameter("ADDR")).trim();
-		String email = (request.getParameter("EMAIL")).trim();
-		String pnum = (request.getParameter("PHNO")).trim();
-
-
-
+            String firstName = (request.getParameter("FNAME")).trim();
+            String lastName = (request.getParameter("LNAME")).trim();
+            String address = (request.getParameter("ADDR")).trim();
+            String email = (request.getParameter("EMAIL")).trim();
+            String phone = (request.getParameter("PHNO")).trim();
         	out.println("<p>Your input User Name is "+userName+"</p>");
-        	out.println("<p>Your input password is "+passwd+"</p>");
 
 
 	        //establish the connection to the underlying database
@@ -112,43 +108,75 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
         	}
 	
 
-	        //select the user table from the underlying db and validate the user name and password
-        	PreparedStatement stmt = null;
+	        //Checks if the username is unique
+            Statement stmt = null;
+            ResultSet rset = null;
+            int taken = 0;
+            String sql = "SELECT COUNT(*) FROM users WHERE user_name ='"+userName+"'";
 
-		String sql = "insert into users values(userName, passwd, null);";
+            //out.println("<p>"+sql+"</p>");
+            try{
+                stmt = conn.createStatement();
+                rset = stmt.executeQuery(sql);
+            }
 
-	        //out.println(sql);
-
-        	try{
-	        	stmt = conn.createStatement();
-		        stmt.executeUpdate();
-        	}
-	
-	        catch(Exception ex){
-		        out.println("<hr>" + ex.getMessage() + "<hr>");
-        	}
+            catch(Exception ex){
+                out.println("<hr>" + ex.getMessage() + "<hr>");
+            }
 
 
-		String sql = "insert into persons values(userName, passwd, fname, lname, address, email, pnum);";
+    
+            while(rset != null && rset.next())
+                taken = rset.getInt(1);
 
-	        //out.println(sql);
+            if (taken == 0){
+            out.println("<p>userName not taken</p>");
+            stmt = null;
+            rset = null;
+            String sql2 = "INSERT INTO users VALUES('"+userName+"','"+passwd+"',CURRENT_DATE)";
 
-        	try{
-	        	stmt = conn.createStatement();
-		        stmt.executeUpdate();
-        	}
-	
-	        catch(Exception ex){
-		        out.println("<hr>" + ex.getMessage() + "<hr>");
-        	}
+            out.println(sql2);
+            try{
+                stmt = conn.createStatement();
+                rset = stmt.executeQuery(sql2);
+                conn.commit();
+            }
 
- 	
+            catch(Exception ex){
+                out.println("<hr>" + ex.getMessage() + "<hr>");
+            }
+
+            stmt = null;
+            rset = null;
+            String sql3 = "INSERT INTO persons VALUES('"+userName+"','"+firstName+"','"+lastName+"','"+address+"','"+email+"','"+phone+"')";
+            try{
+                stmt = conn.createStatement();
+                rset = stmt.executeQuery(sql3);
+                conn.commit();
+            }
+
+            catch(Exception ex){
+                out.println("<hr>" + ex.getMessage() + "<hr>");
+            }
+        }
+
+            else
+                out.println("<p>User name taken</p>");
+
+
                 try{
                         conn.close();
                 }
                 catch(Exception ex){
                         out.println("<hr>" + ex.getMessage() + "<hr>");
                 }
+
+
+
+
+
+
+
 
 
         }
@@ -159,7 +187,7 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
                 out.println("Password: <input type=password name=PASSWD maxlength=20><br>");
                 out.println("<input type=submit name=bSubmit value=Submit>");
                 out.println("</form>");
-        };      
+        }      
 
       out.write("\n");
       out.write("\n");

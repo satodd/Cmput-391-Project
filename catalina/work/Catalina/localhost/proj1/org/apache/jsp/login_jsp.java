@@ -107,7 +107,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 	        //select the user table from the underlying db and validate the user name and password
         	Statement stmt = null;
 	        ResultSet rset = null;
-        	String sql = "select PWD from login where ID = '"+userName+"'";
+        	String sql = "select password from users where user_name = '"+userName+"'";
 		//String sql = "select * from login";
 	        out.println(sql);
         	try{

@@ -6,21 +6,12 @@
  version="2.4">
 
     <servlet>
-        <servlet-name>FirstServlet</servlet-name>
-        <servlet-class>FirstServlet</servlet-class>
+        <servlet-name>UploadImageLogicSQL</servlet-name>
+        <servlet-class>UploadImageLogicSQL</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>FirstServlet</servlet-name>
-        <url-pattern>/firstservlet</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-	<servlet-name>Lab2Example2</servlet-name>
-	<servlet-class>Asn2Sample</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Lab2Example2</servlet-name>
-        <url-pattern>/Asn2Sample</url-pattern>
+        <servlet-name>UploadImageLogicSQL</servlet-name>
+        <url-pattern>/upload</url-pattern>
     </servlet-mapping>
 
 </web-app>

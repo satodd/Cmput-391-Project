@@ -6,12 +6,12 @@
  version="2.4">
 
     <servlet>
-        <servlet-name>FirstServlet</servlet-name>
-        <servlet-class>FirstServlet</servlet-class>
+        <servlet-name>UploadImageLogicSQL</servlet-name>
+        <servlet-class>UploadImageLogicSQL.class</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>FirstServlet</servlet-name>
-        <url-pattern>/firstservlet</url-pattern>
+        <servlet-name>UploadImageLogicSQL</servlet-name>
+        <url-pattern>/upload</url-pattern>
     </servlet-mapping>
 
 </web-app>
