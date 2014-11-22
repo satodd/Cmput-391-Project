@@ -1,3 +1,5 @@
+
+
 <HTML>
 <HEAD>
 
@@ -71,45 +73,78 @@
                 out.println("<hr>" + ex.getMessage() + "<hr>");
             }
 
+            while(rset != null && rset.next()){
+                taken = rset.getInt(1);
+            }
+
+            stmt = null;
+            rset = null;
+            int emailtest = 0;
+            String sql4 = "SELECT COUNT(*) FROM persons WHERE email ='"+email+"'";
+
+            //out.println("<p>"+sql+"</p>");
+            try{
+                stmt = conn.createStatement();
+                rset = stmt.executeQuery(sql4);
+            }
+
+            catch(Exception ex){
+                out.println("<hr>" + ex.getMessage() + "<hr>");
+            }
+              while(rset != null && rset.next()){
+                emailtest = rset.getInt(1);
+            }
+
+
 
     
-            while(rset != null && rset.next())
-                taken = rset.getInt(1);
+ 
 
             if (taken == 0){
-            out.println("<p>userName not taken</p>");
-            stmt = null;
-            rset = null;
-            String sql2 = "INSERT INTO users VALUES('"+userName+"','"+passwd+"',CURRENT_DATE)";
+                if (emailtest == 0){
+                    out.println("<p>User registered please click Next to continue.</p>");
+                    stmt = null;
+                    rset = null;
+                    String sql2 = "INSERT INTO users VALUES('"+userName+"','"+passwd+"',CURRENT_DATE)";
 
-            out.println(sql2);
-            try{
-                stmt = conn.createStatement();
-                rset = stmt.executeQuery(sql2);
-                conn.commit();
+                    try{
+                        stmt = conn.createStatement();
+                        rset = stmt.executeQuery(sql2);
+                        conn.commit();
+                    }
+
+                    catch(Exception ex){
+                        out.println("<hr>" + ex.getMessage() + "<hr>");
+                    }
+
+                    stmt = null;
+                    rset = null;
+                    String sql3 = "INSERT INTO persons VALUES('"+userName+"','"+firstName+"','"+lastName+"','"+address+"','"+email+"','"+phone+"')";
+                    try{
+                        stmt = conn.createStatement();
+                        rset = stmt.executeQuery(sql3);
+                        conn.commit();
+                    }
+
+                    catch(Exception ex){
+                        out.println("<hr>" + ex.getMessage() + "<hr>");
+                    }
+                    String redirectURL = "loginScreen.jsp";
+                    response.sendRedirect(redirectURL);
+                }
+                else {
+                out.println("<p>email taken please click Return to try again</p>");
+                out.println("<form method=post action=registerScreen.jsp>");
+                out.println("<input type=submit name=RETURN value=Return>");
+                out.println("</form>");
+            }
             }
 
-            catch(Exception ex){
-                out.println("<hr>" + ex.getMessage() + "<hr>");
-            }
-
-            stmt = null;
-            rset = null;
-            String sql3 = "INSERT INTO persons VALUES('"+userName+"','"+firstName+"','"+lastName+"','"+address+"','"+email+"','"+phone+"')";
-            try{
-                stmt = conn.createStatement();
-                rset = stmt.executeQuery(sql3);
-                conn.commit();
-            }
-
-            catch(Exception ex){
-                out.println("<hr>" + ex.getMessage() + "<hr>");
-            }
-        }
-
-            else
-                out.println("<p>User name taken</p>");
-
+            else{
+                out.println("<p>User name taken please click Return to try again</p>");
+                out.println("<form method=post action=registerScreen.jsp>");
+                out.println("<input type=submit name=RETURN value=Return>");
+                out.println("</form>");
 
                 try{
                         conn.close();
@@ -119,22 +154,8 @@
                 }
 
 
-
-
-
-
-
-
-
         }
-        else
-        {
-                out.println("<form method=post action=login.jsp>");
-                out.println("UserName: <input type=text name=USERID maxlength=20><br>");
-                out.println("Password: <input type=password name=PASSWD maxlength=20><br>");
-                out.println("<input type=submit name=bSubmit value=Submit>");
-                out.println("</form>");
-        }      
+}
 %>
 
 

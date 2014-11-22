@@ -1,4 +1,8 @@
-
+<% 	String username = (String)request.getSession().getAttribute("userName");
+	if (username == null){
+		username = "guest";
+}
+%>                 
 <HTML>
 	<HEAD>
 		<TITLE>White screen image sharing</TITLE>
@@ -7,6 +11,10 @@
 	<BODY>
 	<!--This is the login page-->
 		<H1><CENTER>Sample Login</CENTER></H1>
+		<%if (username.equals("failed")){
+			out.println("<p><CENTER><FONT color = \"red\">Login Failed please try again</FONT></CENTER></p>");
+			}
+		%>
 
 		<FORM NAME="LoginForm" ACTION="login.jsp" METHOD="post" ><CENTER>
 
@@ -14,11 +22,11 @@
 			<TABLE>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Userid:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="USERID" VALUE="userid"><BR></TD>
+					<TD><INPUT TYPE="text" NAME="USERID"  PLACEHOLDER="userid"><BR></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Password:</I></B></TD>
-					<TD><INPUT TYPE="password" NAME="PASSWD" VALUE="password"></TD>
+					<TD><INPUT TYPE="password" NAME="PASSWD" PLACEHOLDER="password"></TD>
 				</TR>
 			</TABLE>
 
@@ -28,5 +36,4 @@
 		<form name "registerForm" ACTION="registerScreen.html" METHOD="post"><center>
 			<INPUT Type="submit" NAME="Register" VALUE ="REGISTER">
 		</center></form>
-	</BODY>
 </HTML>

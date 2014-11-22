@@ -11,34 +11,34 @@
 			<TABLE>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Userid:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="USERID" VALUE="userid"><BR></TD>
+					<TD><INPUT TYPE="text" NAME="USERID" placeholder="userid" required><BR></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Password:</I></B></TD>
-					<TD><INPUT TYPE="password" NAME="PASSWD" VALUE="password"></TD>
+					<TD><INPUT TYPE="password" NAME="PASSWD" placeholder="password" required></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>First Name:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="FNAME" VALUE="first name"></TD>
+					<TD><INPUT TYPE="text" NAME="FNAME" placeholder="first name" required></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Last Name:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="LNAME" VALUE="last name"></TD>
+					<TD><INPUT TYPE="text" NAME="LNAME" placeholder="last name" required></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Address:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="ADDR" VALUE="address"></TD>
+					<TD><INPUT TYPE="text" NAME="ADDR" placeholder="address" required></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Email:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="EMAIL" VALUE="email"></TD>
+					<TD><INPUT TYPE="text" NAME="EMAIL" placeholder="email" required></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Phone Number:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="PHNO" VALUE="phone #"></TD>
+					<TD><INPUT TYPE="text" NAME="PHNO" placeholder="phone #" required></TD>
 				</TR>
 			</TABLE>
-			<INPUT TYPE="submit" NAME="CREATE" VALUE="CREATE">
+			<INPUT TYPE="submit" NAME="CREATE" VALUE="Create">
 		</CENTER></FORM>
 
 	</body>

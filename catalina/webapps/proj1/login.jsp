@@ -1,10 +1,15 @@
+<%
+
+    String name = request.getParameter( "USERID" );
+    session.setAttribute( "userName", name );
+%>
+
 <HTML>
 <HEAD>
 
 
 <TITLE>Your Login Result</TITLE>
 </HEAD>
-
 <BODY>
 <!--A simple example to demonstrate how to use JSP to 
     connect and query a database. 
@@ -19,8 +24,7 @@
 	        //get the user input from the login page
         	String userName = (request.getParameter("USERID")).trim();
 	        String passwd = (request.getParameter("PASSWD")).trim();
-        	out.println("<p>Your input User Name is "+userName+"</p>");
-        	out.println("<p>Your input password is "+passwd+"</p>");
+            String what = "dfd";
 
 
 	        //establish the connection to the underlying database
@@ -56,7 +60,7 @@
 	        ResultSet rset = null;
         	String sql = "select password from users where user_name = '"+userName+"'";
 		//String sql = "select * from login";
-	        out.println(sql);
+
         	try{
 	        	stmt = conn.createStatement();
 		        rset = stmt.executeQuery(sql);
@@ -72,17 +76,24 @@
 	        	truepwd = (rset.getString(1)).trim();
 	
         	//display the result
-	        if(passwd.equals(truepwd))
+	        if(passwd.equals(truepwd) && truepwd != ""){
 		        out.println("<p><b>Your Login is Successful!</b></p>");
-        	else
+                String redirectURL = "main.jsp";
+                response.sendRedirect(redirectURL);
+            }
+        	else{
+                session.setAttribute( "userName", "failed" );
 	        	out.println("<p><b>Either your userName or Your password is inValid!</b></p>");
+                String redirectURL = "loginScreen.jsp";
+                response.sendRedirect(redirectURL);
+                }   
 
-                try{
-                        conn.close();
-                }
-                catch(Exception ex){
-                        out.println("<hr>" + ex.getMessage() + "<hr>");
-                }
+            try{
+                    conn.close();
+            }
+            catch(Exception ex){
+                    out.println("<hr>" + ex.getMessage() + "<hr>");
+            }
         }
         else
         {
