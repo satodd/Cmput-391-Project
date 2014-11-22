@@ -33,7 +33,7 @@
 			<INPUT TYPE="submit" NAME="Submit" VALUE="LOGIN">
 		</CENTER></FORM>
 
-		<form name "registerForm" ACTION="registerScreen.html" METHOD="post"><center>
+		<form name "registerForm" ACTION="registerScreen.jsp" METHOD="post"><center>
 			<INPUT Type="submit" NAME="Register" VALUE ="REGISTER">
 		</center></form>
 </HTML>

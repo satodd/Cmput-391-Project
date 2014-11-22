@@ -1,3 +1,10 @@
+<%
+  String username = (String)request.getSession().getAttribute("userName");
+  if (username == "failed" || username == "guest" || username == null){
+    out.println("<h1><CENTER>Unauthorized access</CENTER></H1>");
+  }
+else{
+%>
 <HTML>
 <HEAD>
 
@@ -32,11 +39,19 @@ Search:
 
 <form name "Upload" ACTION="upload.html" METHOD="post"><center>
 			<INPUT Type="submit" NAME="Upload" VALUE ="Upload">
+</form>
 
-<form name "Search" ACTION="searchscreen.html" METHOD="post"><center>
+<form name "Search" ACTION="searchScreen.jsp" METHOD="post"><center>
 			<INPUT Type="submit" NAME="Search" VALUE ="Search">
 
 </form>
+
+<form name "Groups" ACTION="groupScreen.jsp" METHOD="post"><center>
+      <INPUT Type="submit" NAME="Search" VALUE ="Groups">
+
+</form>
+
+
 </body> 
 </html>
 
@@ -47,4 +62,4 @@ Search:
 
 </BODY>
 </HTML>
-
+<%}%>
