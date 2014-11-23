@@ -2,7 +2,6 @@
 
 <%
     String username = (String)request.getSession().getAttribute("userName");
-    out.println("<p>"+username+"</p>");
     if (username == "failed" || username == "guest" || username == null){
         out.println("<h1><CENTER>Unauthorized access</CENTER></H1>");
     }
@@ -12,7 +11,8 @@ else{
 <HEAD>
 
 
-<TITLE>Registration Results</TITLE>
+<TITLE>Group creation results</TITLE>
+<h1><CENTER>Group creation results</CENTER></h1>
 </HEAD>
 
 <BODY>
@@ -38,6 +38,7 @@ else{
         	String gName = (request.getParameter("GNAME")).trim();
 	        String gTemp = (request.getParameter("GMEM")).trim();
             gTemp = gTemp.replace(" ", "");
+            gTemp = gTemp.replace(","+username,"");
             gTemp = gTemp.concat(","+username);
             String [] gMem = gTemp.split(",");
 
@@ -181,12 +182,14 @@ else{
 
             //Add all the coresponding grouplists
             int length = gMem.length;
+            int count = 0;
             for(int i=0;i<length;i++){
 
                 //Checks to see if the user actually exists
                 stmt = null;
                 rset = null;
                 int val = 0;
+                String outc= "";
                 String sql3 = "SELECT COUNT(*) FROM persons WHERE user_name = '"+gMem[i]+"'";
 
 
@@ -202,13 +205,26 @@ else{
                 while(rset != null && rset.next()){
                 val = rset.getInt(1);
                 }
+                out.println("<form method=groupNotes action=notes.jsp>");
 
                 //Creates Grouplist item for valid users
                 if(val != 0){
-                    out.println("<p>"+gMem[i]+" has been added to the group</p>");
+                    outc = Integer.toString(count);
+                    out.println("<p>"+gMem[i]+" has been added to the group add user notes below</p>");
                     stmt = null;
                     rset = null;
                     String sql4 = "INSERT INTO group_lists VALUES("+max_gid+",'"+gMem[i]+"',sysdate,null)";
+                    out.println("<TD><B><I>Group id:</I></B></TD>");
+                    out.println("<TD><INPUT TYPE=text NAME=GMEM"+outc+" input value="+max_gid+" readonly><BR></TD>");
+
+                    out.println("<TD><B><I>Member Name:</I></B></TD>");
+                    out.println("<TD><INPUT TYPE=text NAME=MEMBNAME"+outc+" input value="+gMem[i]+" readonly><BR></TD>");
+
+                    out.println("<TD><B><I>Notes:</I></B></TD>");
+                    out.println("<TD><INPUT TYPE=text NAME=MemNote"+outc+"><BR></TD>");
+                    count = count +1;
+
+
 
 
                     try{
@@ -233,7 +249,8 @@ else{
         catch(Exception ex){
             out.println("<hr>" + ex.getMessage() + "<hr>");
         }
-        out.println("<form method=return action=main.jsp>");
+        out.println("<TD><B><I>Number of users added:</I></B></TD>");
+        out.println("<TD><INPUT TYPE=number NAME=Numberadded input value="+count+" readonly><BR></TD>");
         out.println("<input type=submit name=RETURN value=Continue>");
         out.println("</form>");
 
