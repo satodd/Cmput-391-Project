@@ -1,9 +1,15 @@
+	
 <%@ page import="java.sql.*" %>
 <%@ page import="java.util.*" %>
 <%
 	//CHECK FOR LOGIN
 	//String username = (String)request.getSession().getAttribute("userName");
 	String username = "Test2";
+
+	String pid = request.getQueryString();
+
+	// check if user is owner
+	boolean isOwner = true;
 
 	Connection conn = null;
     String driverName = "oracle.jdbc.driver.OracleDriver";
@@ -14,6 +20,8 @@
 
     conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
 	conn.setAutoCommit(false);
+
+	String sql = "SELECT * FROM images WHERE photo_id ='" + pid + "'";
 
 	Statement stmt = null;
 	ResultSet rset = null;
@@ -26,6 +34,14 @@
     catch(Exception ex){
         out.println("<hr>" + ex.getMessage() + "<hr>");
     }
+
+    if (rset == null || !rset.next()) return;
+
+    String owner = rset.getString(2);
+    int permitted = rset.getInt(3);
+    String subject = rset.getString(4);
+    String place = rset.getString(5);
+    String desc = rset.getString(7);
 
     sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
 
@@ -50,52 +66,52 @@
 
 %>
 
-
 <HTML>
 <HEAD>
-<TITLE>Upload</TITLE>
+
+
+<TITLE>Image</TITLE>
 </HEAD>
 <BODY>
 
-<title>Upload image</title> 
+<title>Image</title> 
 <header>
 <h1>
 <center>
-Image Upload
+Image 
 </center>
 </h1>
 </header>
 <hr>
-Please input or select the path of the image!
+
 <form name="upload-image" method="POST" enctype="multipart/form-data" action="upload">
 
 <table>
   <tr>
-    <th>File path: </th>
-    <td><input name="file-path" type="file" size="30" ></input></td>
+    <td><img src="image?<%=pid%>"/></td>
   </tr>
 
-<!-- -providing some required information, including a unique user name, password, first name, last name, address, email, and phone number -->
-		<CENTER>
-			<TABLE>
-				<TR VALIGN=TOP ALIGN=CENTER>
-					<TD><B><I>Place:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="place"><BR></TD>
-				</TR>
-				<TR VALIGN=TOP ALIGN=CENTER>
-					<TD><B><I>Date:</I></B></TD>
-					<TD><INPUT TYPE="date" NAME="timing"></TD>
-				</TR>
-				<TR VALIGN=TOP ALIGN=CENTER>
-					<TD><B><I>Subject:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="subject"></TD>
-				</TR>
-				<TR VALIGN=TOP ALIGN=CENTER>
-					<TD><B><I>Description:</I></B></TD>
-					<TD><TEXTAREA style="resize:none;" NAME="desc"></TEXTAREA></TD>
-				</TR>
+<% if(isOwner) { %>
+	<CENTER>
+		<TABLE>
+			<TR VALIGN=TOP ALIGN=CENTER>
+				<TD><B><I>Place:</I></B></TD>
+				<TD><INPUT TYPE="text" NAME="place" value="<%=place%>"><BR></TD>
+			</TR>
+			<TR VALIGN=TOP ALIGN=CENTER>
+				<TD><B><I>Date:</I></B></TD>
+				<TD><INPUT TYPE="date" NAME="timing"></TD>
+			</TR>
+			<TR VALIGN=TOP ALIGN=CENTER>
+				<TD><B><I>Subject:</I></B></TD>
+				<TD><INPUT TYPE="text" NAME="subject" value="<%=subject%>"></TD>
+			</TR>
+			<TR VALIGN=TOP ALIGN=CENTER>
+				<TD><B><I>Description:</I></B></TD>
+				<TD><TEXTAREA style="resize:none;" NAME="desc" value="<%=desc%>"></TEXTAREA></TD>
+			</TR>
 
-				<TR VALIGN=TOP ALIGN=CENTER>
+			<TR VALIGN=TOP ALIGN=CENTER>
 				<TD><B><I>Access:</I></B></TD>
 				<TD>
 					<select name="permitted">
@@ -111,12 +127,17 @@ Please input or select the path of the image!
 					</select>
 				</TD>
 			</TR>
-			</TABLE>
-		</CENTER>
+		</TABLE>
+	</CENTER>
+<% } else { %>
+	
+<% } %>
+
+		
 
 	  <tr>
     <td ALIGN=CENTER COLSPAN="2"><input type="submit" name=".submit" 
-     value="Upload"></td>
+     value="OK"></td>
   </tr>
 
 	</body>

@@ -14,4 +14,22 @@
         <url-pattern>/upload</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>PictureBrowse</servlet-name>
+        <servlet-class>PictureBrowse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PictureBrowse</servlet-name>
+        <url-pattern>/browse</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetOnePic</servlet-name>
+        <servlet-class>GetOnePic</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetOnePic</servlet-name>
+        <url-pattern>/image</url-pattern>
+    </servlet-mapping>
+
 </web-app>

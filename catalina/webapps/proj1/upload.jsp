@@ -2,6 +2,7 @@
 <%@ page import="java.util.*" %>
 <%
 	//CHECK FOR LOGIN
+
 	//String username = (String)request.getSession().getAttribute("userName");
 	String username = "Test2";
 
@@ -17,17 +18,8 @@
 
 	Statement stmt = null;
 	ResultSet rset = null;
-
-	try{
-        stmt = conn.createStatement();
-        rset = stmt.executeQuery(sql);
-    }
-
-    catch(Exception ex){
-        out.println("<hr>" + ex.getMessage() + "<hr>");
-    }
-
-    sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
+ 	
+    String sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
 
     try{
         stmt = conn.createStatement();
@@ -104,10 +96,6 @@ Please input or select the path of the image!
 				    	<% for (int i = 0; i < group_names.size(); i++) { %>
 				    		<option value="<%=group_ids.get(i)%>"><%=group_names.get(i)%></option>
 				    	<% } %>
-						<!-- 
-						each(group)
-							<option value="{{group.id}}">{{group.name}}</option>
-						-->
 					</select>
 				</TD>
 			</TR>
