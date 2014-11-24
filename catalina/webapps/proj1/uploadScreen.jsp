@@ -2,8 +2,11 @@
 <%@ page import="java.util.*" %>
 <%
 	//CHECK FOR LOGIN
-	//String username = (String)request.getSession().getAttribute("userName");
-	String username = "Test2";
+	String username = (String)request.getSession().getAttribute("userName");
+    if (username == "failed" || username == "guest" || username == null){
+        out.println("<h1><CENTER>Unauthorized access</CENTER></H1>");
+    }
+else{
 
 	Connection conn = null;
     String driverName = "oracle.jdbc.driver.OracleDriver";
@@ -18,16 +21,8 @@
 	Statement stmt = null;
 	ResultSet rset = null;
 
-	try{
-        stmt = conn.createStatement();
-        rset = stmt.executeQuery(sql);
-    }
 
-    catch(Exception ex){
-        out.println("<hr>" + ex.getMessage() + "<hr>");
-    }
-
-    sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
+    String sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
 
     try{
         stmt = conn.createStatement();
@@ -47,6 +42,7 @@
     	group_ids.add(rset.getInt(1));
     	group_names.add(rset.getString(2));
 	}
+
 
 %>
 
@@ -121,3 +117,4 @@ Please input or select the path of the image!
 
 	</body>
 </HTML>
+<%}%>

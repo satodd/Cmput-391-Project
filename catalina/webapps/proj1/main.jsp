@@ -37,7 +37,7 @@ Search:
     <td ALIGN=CENTER COLSPAN="2"><input type="submit" name=".submit" 
      value="Search"></td> -->
 
-<form name "Upload" ACTION="upload.html" METHOD="post"><center>
+<form name "Upload" ACTION="uploadScreen.jsp" METHOD="post"><center>
 			<INPUT Type="submit" NAME="Upload" VALUE ="Upload">
 </form>
 
