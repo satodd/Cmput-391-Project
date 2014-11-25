@@ -13,20 +13,9 @@ else{
 	    String subject1 = request.getParameter("subject");
 	    String desc1 = request.getParameter("desc");
 	    String permitted1 = request.getParameter("permitted");
-	    String fp = request.getParameter("file-path");
 
 
 %>
-
-
-
-
-
-
-
-
-
-
 <HEAD>
 <TITLE>Upload</TITLE>
 </HEAD>
@@ -42,14 +31,9 @@ Image Upload
 </header>
 <hr>
 Please input or select the path of the image!
-<form name="upload-image" method="POST" enctype="multipart/form-data" action="upload">
+<form name="upload-image" method="POST" action="upload">
 
 <table>
-  <tr>
-    <th>File path: </th>
-    <td><input name="file-path" type="file" size="30" value =<%out.println(fp);%> ></input></td>
-  </tr>
-
 <!-- -providing some required information, including a unique user name, password, first name, last name, address, email, and phone number -->
 		<CENTER>
 			<TABLE>
@@ -79,7 +63,7 @@ Please input or select the path of the image!
 
 	 <tr>
     <td ALIGN=CENTER COLSPAN="2"><input type="submit" name=".submit" 
-     value="Upload"></td>
+     value="upload.jsp"></td>
   	</tr>
 </form>
 	</body>

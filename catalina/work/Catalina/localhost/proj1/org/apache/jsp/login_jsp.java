@@ -55,6 +55,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 
     String name = request.getParameter( "USERID" );
     session.setAttribute( "userName", name );
+    session.setAttribute( "imageView", null);
 
       out.write("\n");
       out.write("\n");

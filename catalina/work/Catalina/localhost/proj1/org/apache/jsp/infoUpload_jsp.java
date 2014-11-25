@@ -6,7 +6,7 @@ import javax.servlet.jsp.*;
 import java.sql.*;
 import java.util.*;
 
-public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class infoUpload_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -57,57 +57,22 @@ public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write('\n');
 
   String username = (String)request.getSession().getAttribute("userName");
+  Integer pic_id = (Integer)request.getSession().getAttribute("pic_id");
   if (username == "failed" || username == "guest" || username == null){
     out.println("<h1><CENTER>Unauthorized access</CENTER></H1>");
   }
-else{
+else{;
 
-  Connection conn = null;
-    String driverName = "oracle.jdbc.driver.OracleDriver";
-    String dbstring = "jdbc:oracle:thin:@gwynne.cs.ualberta.ca:1521:CRS";
-  Class drvClass = Class.forName(driverName); 
-  DriverManager.registerDriver((Driver)
-    drvClass.newInstance());
-    conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
-  conn.setAutoCommit(false);
-  Statement stmt = null;
-  ResultSet rset = null;
-  String sql;
+    String place = null;
+    String timing = null;
+    String subject = null;;
+    String desc = null;
+    String permitted = null;
 
-  if(!username.equals("admin")){
-    sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
-  }
-  else{
-    sql = "SELECT group_id, group_name FROM groups";
-  }
-    try{
-        stmt = conn.createStatement();
-        rset = stmt.executeQuery(sql);
-    }
-    catch(Exception ex){
-        out.println("<hr>" + ex.getMessage() + "<hr>");
-    }
 
-    ArrayList<Integer> group_ids = new ArrayList<Integer>();
-    ArrayList<String> group_names = new ArrayList<String>();
-    out.println("<P>Signed in as "+username+" </p>");
-    if (rset == null) return;
-    while(rset.next()) {
-      group_ids.add(rset.getInt(1));
-      group_names.add(rset.getString(2));
-    }
 
-    String place1 = null;
-    String timing1 = null;
-    String subject1 = null;
-    String desc1 = null;
-    String permitted1 = "Private";
 
       out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<HTML>\n");
       out.write("<HEAD>\n");
       out.write("<TITLE>Upload</TITLE>\n");
       out.write("</HEAD>\n");
@@ -122,60 +87,54 @@ else{
       out.write("</h1>\n");
       out.write("</header>\n");
       out.write("<hr>\n");
-      out.write("Please input or select the path of the image!\n");
-      out.write("<form name=\"upload-image\" method=\"POST\" enctype=\"multipart/form-data\" action=\"upload\">\n");
-      out.write("\n");
+      out.write("Please info for the image! \n");
+      out.write("<form name=\"upload\" method=\"POST\" action=\"uploadall.jsp\">\n");
       out.write("<table>\n");
-      out.write("  <tr>\n");
-      out.write("    <th>File path: </th>\n");
-      out.write("    <td><input name=\"file-path\" type=\"file\" size=\"30\" ></input></td>\n");
-      out.write("  </tr>\n");
-      out.write("</TABLE>\n");
-      out.write("<!-- -providing some required information, including a unique user name, password, first name, last name, address, email, and phone number \n");
+      out.write("<!-- -providing some required information, including a unique user name, password, first name, last name, address, email, and phone number -->\n");
       out.write("\t\t<CENTER>\n");
       out.write("      <TABLE>\n");
       out.write("        <TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("          <TD><B><I>Place:</I></B></TD>\n");
       out.write("          <TD><INPUT TYPE=\"text\" NAME=\"place\" value= ");
- out.println(place1); 
+ out.println(place); 
       out.write(" ><BR></TD>\n");
       out.write("        </TR>\n");
       out.write("        <TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("          <TD><B><I>Date:</I></B></TD>\n");
       out.write("          <TD><INPUT TYPE=\"date\" NAME=\"timing\" value= ");
- out.println(timing1); 
+ out.println(timing); 
       out.write("></TD>\n");
       out.write("        </TR>\n");
       out.write("        <TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("          <TD><B><I>Subject:</I></B></TD>\n");
       out.write("          <TD><INPUT TYPE=\"text\" NAME=\"subject\" value= ");
- out.println(subject1); 
+ out.println(subject); 
       out.write("></TD>\n");
       out.write("        </TR>\n");
       out.write("        <TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("          <TD><B><I>Description:</I></B></TD>\n");
       out.write("          <TD><input type=\"text\" NAME=\"desc\" value= ");
- out.println(desc1); 
+ out.println(desc); 
       out.write("></TEXTAREA></TD>\n");
       out.write("        </TR>\n");
-      out.write("        <TR VALIGN=TOP ALIGN=CENTER>\n");
-      out.write("        <TD><B><I>Access:</I></B></TD>\n");
-      out.write("          <TD><input type=\"text\" NAME=\"groupid\" value = ");
- out.println(permitted1); 
-      out.write("></TD>\n");
-      out.write("        </TR>\n");
+      out.write("        <!--<TR VALIGN=TOP ALIGN=CENTER>\n");
+      out.write("        <TD><B><I>photoid</I></B></TD>\n");
+      out.write("          <TD><input type=\"text\" NAME=\"photoid\" value=\"");
+out.println(pic_id);
+      out.write("\" READONLY></TD>\n");
+      out.write("        </TR>-->\n");
       out.write("        <TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("        <TD><B><I>Access:</I></B></TD>\n");
       out.write("          <TD><input type=\"text\" NAME=\"permit\" value = ");
- out.println(permitted1); 
+ out.println(permitted); 
       out.write("></TD>\n");
       out.write("        </TR>\n");
       out.write("      </TABLE>\n");
-      out.write("    </CENTER>-->\n");
+      out.write("    </CENTER>\n");
       out.write("\n");
       out.write("\t <tr>\n");
       out.write("    <td ALIGN=CENTER COLSPAN=\"2\"><input type=\"submit\" name=\".submit\" \n");
-      out.write("     value=\"Upload\"></td>\n");
+      out.write("     value=\"Info\"></td>\n");
       out.write("  \t</tr>\n");
       out.write("</form>\n");
       out.write("\t</body>\n");

@@ -15,7 +15,6 @@ Image Upload
 <hr>
 Please input or select the path of the image!
 <form name="upload-image" method="POST" enctype="multipart/form-data" action="upload">
-
 <table>
   <tr>
     <th>File path: </th>
@@ -30,11 +29,11 @@ Please input or select the path of the image!
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Date:</I></B></TD>
-					<TD><INPUT TYPE="date" NAME="timing"></TD>
+					<<TD><NAME="timing"></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Subject:</I></B></TD>
-					<TD><INPUT TYPE="text" NAME="subject"></TD>
+					<TD><NAME="subject" value="<%=subject%>"></TD>
 				</TR>
 				<TR VALIGN=TOP ALIGN=CENTER>
 					<TD><B><I>Description:</I></B></TD>
