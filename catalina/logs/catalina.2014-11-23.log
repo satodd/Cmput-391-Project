@@ -1059,3 +1059,11 @@ Nov 23, 2014 3:02:20 PM org.apache.jk.server.JkMain start
 INFO: Jk running ID=0 time=0/11  config=null
 Nov 23, 2014 3:02:20 PM org.apache.catalina.startup.Catalina start
 INFO: Server startup in 229 ms
+Nov 23, 2014 3:57:22 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-16460
+Nov 23, 2014 3:57:23 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Nov 23, 2014 3:57:23 PM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/proj1] registered the JDBC driver [oracle.jdbc.OracleDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+Nov 23, 2014 3:57:23 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-16460

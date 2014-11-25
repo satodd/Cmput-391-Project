@@ -2,67 +2,77 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="java.util.*" %>
 <%
+	String username = (String)request.getSession().getAttribute("userName");
+	if (username == "failed" || username == "guest" || username == null){
+		out.println("<h1><CENTER>Unauthorized access</CENTER></H1>");
+	} else {
 	//CHECK FOR LOGIN
 	//String username = (String)request.getSession().getAttribute("userName");
-	String username = "Test2";
+	//String username = "Test";
 
-	String pid = request.getQueryString();
+		String pid = request.getQueryString();
 
-	// check if user is owner
-	boolean isOwner = true;
+		Connection conn = null;
+	    String driverName = "oracle.jdbc.driver.OracleDriver";
+	    String dbstring = "jdbc:oracle:thin:@gwynne.cs.ualberta.ca:1521:CRS";
+		Class drvClass = Class.forName(driverName); 
+		DriverManager.registerDriver((Driver)
+	    drvClass.newInstance());
 
-	Connection conn = null;
-    String driverName = "oracle.jdbc.driver.OracleDriver";
-    String dbstring = "jdbc:oracle:thin:@gwynne.cs.ualberta.ca:1521:CRS";
-	Class drvClass = Class.forName(driverName); 
-	DriverManager.registerDriver((Driver)
-    drvClass.newInstance());
+	    conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+		conn.setAutoCommit(false);
+		
 
-    conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
-	conn.setAutoCommit(false);
+		String sql = "SELECT * FROM images WHERE photo_id ='" + pid + "'";
 
-	String sql = "SELECT * FROM images WHERE photo_id ='" + pid + "'";
+		Statement stmt = null;
+		ResultSet rset = null;
 
-	Statement stmt = null;
-	ResultSet rset = null;
+		try{
+	        stmt = conn.createStatement();
+	        rset = stmt.executeQuery(sql);
+	    }
 
-	try{
-        stmt = conn.createStatement();
-        rset = stmt.executeQuery(sql);
-    }
+	    catch(Exception ex){
+	        out.println("<hr>" + ex.getMessage() + "<hr>");
+	    }
 
-    catch(Exception ex){
-        out.println("<hr>" + ex.getMessage() + "<hr>");
-    }
+	    if (rset == null || !rset.next()) return;
 
-    if (rset == null || !rset.next()) return;
+	    String owner = rset.getString(2);
+	    int permitted = rset.getInt(3);
+	    String subject = rset.getString(4);
+	    String place = rset.getString(5);
+	    String desc = rset.getString(7);
 
-    String owner = rset.getString(2);
-    int permitted = rset.getInt(3);
-    String subject = rset.getString(4);
-    String place = rset.getString(5);
-    String desc = rset.getString(7);
+	    String isOwner;
+		//check if user is owner
+	    if (username.equals(owner)){
+	    	isOwner = "true";
+		} else {isOwner = "false";}
 
-    sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
+		boolean isInGroup;
+	    //sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
+	    sql = "Select groups.group_id, groups.group_name from groups, group_lists Where groups.group_id = group_lists.group_id AND group_lists.friend_id ='"+ username + "'";
 
-    try{
-        stmt = conn.createStatement();
-        rset = stmt.executeQuery(sql);
-    }
+	    try{
+	        stmt = conn.createStatement();
+	        rset = stmt.executeQuery(sql);
+	    }
 
-    catch(Exception ex){
-        out.println("<hr>" + ex.getMessage() + "<hr>");
-    }
+	    catch(Exception ex){
+	        out.println("<hr>" + ex.getMessage() + "<hr>");
+	    }
 
-    ArrayList<Integer> group_ids = new ArrayList<Integer>();
-    ArrayList<String> group_names = new ArrayList<String>();
+	    ArrayList<Integer> group_ids = new ArrayList<Integer>();
+	    ArrayList<String> group_names = new ArrayList<String>();
 
-    if (rset == null) return;
+	    if (rset == null) return;
 
-    while(rset.next()) {
-    	group_ids.add(rset.getInt(1));
-    	group_names.add(rset.getString(2));
-	}
+	    while(rset.next()) {
+	    	group_ids.add(rset.getInt(1));
+	    	group_names.add(rset.getString(2));
+		}
 
 %>
 
@@ -78,22 +88,25 @@
 <header>
 <h1>
 <center>
-Image 
+Hello <%=username%> - Image 
 </center>
 </h1>
 </header>
 <hr>
 
-<form name="upload-image" method="POST" enctype="multipart/form-data" action="upload">
-
 <table>
   <tr>
     <td><img src="image?<%=pid%>"/></td>
   </tr>
-
-<% if(isOwner) { %>
+<% if(isOwner == "true") { %>
 	<CENTER>
+		<FORM NAME="Back" ACTION="main.jsp" METHOD="post" ><CENTER>
+		<FORM NAME="UpdateForum" ACTION="updated.jsp" METHOD="post" ><CENTER>
 		<TABLE>
+			<TR VALIGN=TOP ALIGN=CENTER>
+				<TD><B><I>ID Number:</I></B></TD>
+				<TD><INPUT TYPE="text" NAME="imgid" value="<%=pid%>" READONLY><BR></TD>
+			</TR>
 			<TR VALIGN=TOP ALIGN=CENTER>
 				<TD><B><I>Place:</I></B></TD>
 				<TD><INPUT TYPE="text" NAME="place" value="<%=place%>"><BR></TD>
@@ -120,25 +133,37 @@ Image
 				    	<% for (int i = 0; i < group_names.size(); i++) { %>
 				    		<option value="<%=group_ids.get(i)%>"><%=group_names.get(i)%></option>
 				    	<% } %>
-						<!-- 
-						each(group)
-							<option value="{{group.id}}">{{group.name}}</option>
-						-->
 					</select>
 				</TD>
 			</TR>
 		</TABLE>
 	</CENTER>
-<% } else { %>
+    <INPUT TYPE="submit" NAME="OK" VALUE="OK">
+    <INPUT TYPE="submit" NAME="main" VALUE="Main">
 	
+<%} else { %>
+
+	<CENTER>
+		<TABLE>
+			<TR VALIGN=TOP ALIGN=CENTER>
+				<TD><B><I>Place:</I></B></TD>
+				<TD><NAME="place" value="<%=place%>"><BR></TD>
+			</TR>
+			<TR VALIGN=TOP ALIGN=CENTER>
+				<TD><B><I>Date:</I></B></TD>
+				<TD><NAME="timing"></TD>
+			</TR>
+			<TR VALIGN=TOP ALIGN=CENTER>
+				<TD><B><I>Subject:</I></B></TD>
+				<TD><NAME="subject" value="<%=subject%>"></TD>
+			</TR>
+			<TR VALIGN=TOP ALIGN=CENTER>
+				<TD><B><I>Description:</I></B></TD>
+				<TD><NAME="desc" value="<%=desc%>"></TD>
+			</TR>
+		</TABLE>
+	</CENTER>
 <% } %>
-
-		
-
-	  <tr>
-    <td ALIGN=CENTER COLSPAN="2"><input type="submit" name=".submit" 
-     value="OK"></td>
-  </tr>
-
 	</body>
 </HTML>
+<%}%>

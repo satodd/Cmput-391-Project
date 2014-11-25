@@ -1,0 +1,3097 @@
+Nov 24, 2014 1:13:30 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 149 in the jsp file: /photo.jsp
+permitted cannot be resolved to a type
+146: 
+147: 			<TR VALIGN=TOP ALIGN=CENTER>
+148: 				<TD><B><I>Access:</I></B></TD>
+149: 				<TD><NAME="permitted" value="<%permitted%>"></TD>
+150: 			</TR>
+151: 		</TABLE>
+152: 	</CENTER>
+
+
+An error occurred at line: 149 in the jsp file: /photo.jsp
+Duplicate local variable out
+146: 
+147: 			<TR VALIGN=TOP ALIGN=CENTER>
+148: 				<TD><B><I>Access:</I></B></TD>
+149: 				<TD><NAME="permitted" value="<%permitted%>"></TD>
+150: 			</TR>
+151: 		</TABLE>
+152: 	</CENTER>
+
+
+An error occurred at line: 149 in the jsp file: /photo.jsp
+Syntax error on token ".", ; expected
+146: 
+147: 			<TR VALIGN=TOP ALIGN=CENTER>
+148: 				<TD><B><I>Access:</I></B></TD>
+149: 				<TD><NAME="permitted" value="<%permitted%>"></TD>
+150: 			</TR>
+151: 		</TABLE>
+152: 	</CENTER>
+
+
+An error occurred at line: 149 in the jsp file: /photo.jsp
+The method write(String) is undefined for the type photo_jsp
+146: 
+147: 			<TR VALIGN=TOP ALIGN=CENTER>
+148: 				<TD><B><I>Access:</I></B></TD>
+149: 				<TD><NAME="permitted" value="<%permitted%>"></TD>
+150: 			</TR>
+151: 		</TABLE>
+152: 	</CENTER>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 1:24:51 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 32 in the jsp file: /photo.jsp
+Duplicate local variable sql
+29: 	//check if user is owner
+30: 	String sql = "SELECT owner_name FROM images WHERE photo_id ='" + pid + "'";
+31: 
+32: 	String sql = "SELECT * FROM images WHERE photo_id ='" + pid + "'";
+33: 
+34: 	Statement stmt = null;
+35: 	ResultSet rset = null;
+
+
+An error occurred at line: 101 in the jsp file: /photo.jsp
+isOwner cannot be resolved to a variable
+98:   <tr>
+99:     <td><img src="image?<%=pid%>"/></td>
+100:   </tr>
+101: <% if(isOwner) { %>
+102: 	<CENTER>
+103: 		<TABLE>
+104: 			<TR VALIGN=TOP ALIGN=CENTER>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 1:27:37 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /photo.jsp
+stmt1 cannot be resolved to a variable
+34: 	ResultSet rset = null;
+35: 
+36: 	try{
+37:         stmt1 = conn.createStatement();
+38:         rset1 = stmt1.executeQuery(sql);
+39:     }
+40: 
+
+
+An error occurred at line: 38 in the jsp file: /photo.jsp
+rset1 cannot be resolved to a variable
+35: 
+36: 	try{
+37:         stmt1 = conn.createStatement();
+38:         rset1 = stmt1.executeQuery(sql);
+39:     }
+40: 
+41:     catch(Exception ex){
+
+
+An error occurred at line: 38 in the jsp file: /photo.jsp
+stmt1 cannot be resolved
+35: 
+36: 	try{
+37:         stmt1 = conn.createStatement();
+38:         rset1 = stmt1.executeQuery(sql);
+39:     }
+40: 
+41:     catch(Exception ex){
+
+
+An error occurred at line: 45 in the jsp file: /photo.jsp
+rset1 cannot be resolved
+42:         out.println("<hr>" + ex.getMessage() + "<hr>");
+43:     }
+44: 
+45: 	if (rset1.getString(1) == username){
+46: 		isOwner = true;
+47: 	}
+48: 	
+
+
+An error occurred at line: 49 in the jsp file: /photo.jsp
+Duplicate local variable sql
+46: 		isOwner = true;
+47: 	}
+48: 	
+49: 	String sql = "SELECT * FROM images WHERE photo_id ='" + pid + "'";
+50: 
+51: 	Statement stmt = null;
+52: 	ResultSet rset = null;
+
+
+An error occurred at line: 51 in the jsp file: /photo.jsp
+Duplicate local variable stmt
+48: 	
+49: 	String sql = "SELECT * FROM images WHERE photo_id ='" + pid + "'";
+50: 
+51: 	Statement stmt = null;
+52: 	ResultSet rset = null;
+53: 
+54: 	try{
+
+
+An error occurred at line: 52 in the jsp file: /photo.jsp
+Duplicate local variable rset
+49: 	String sql = "SELECT * FROM images WHERE photo_id ='" + pid + "'";
+50: 
+51: 	Statement stmt = null;
+52: 	ResultSet rset = null;
+53: 
+54: 	try{
+55:         stmt = conn.createStatement();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 1:27:51 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 49 in the jsp file: /photo.jsp
+Duplicate local variable sql
+46: 		isOwner = true;
+47: 	}
+48: 
+49: 	String sql = "SELECT * FROM images WHERE photo_id ='" + pid + "'";
+50: 
+51: 	Statement stmt = null;
+52: 	ResultSet rset = null;
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 1:28:04 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.sql.SQLException: ResultSet.next was not called
+	at oracle.jdbc.driver.OracleResultSetImpl.getString(OracleResultSetImpl.java:1240)
+	at org.apache.jsp.photo_jsp._jspService(photo_jsp.java:99)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 2:08:26 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 57 in the jsp file: /photo.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+54:     	isOwner = true;
+55: 	}
+56: 
+57: 	boolean isInGroup
+58:     //sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
+59:     sql = "Select groups.group_id, groups.group_name from groups, group_lists Where groups.group_id = group_lists.group_id AND group_lists.friend_id ='"+ username + "'";
+60:     
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 2:12:36 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 89 in the jsp file: /photo.jsp
+username cannot be resolved to a type
+86: </HEAD>
+87: <BODY>
+88: 
+89: <title>Hello <% username %> Image</title> 
+90: <header>
+91: <h1>
+92: <center>
+
+
+An error occurred at line: 89 in the jsp file: /photo.jsp
+Duplicate local variable out
+86: </HEAD>
+87: <BODY>
+88: 
+89: <title>Hello <% username %> Image</title> 
+90: <header>
+91: <h1>
+92: <center>
+
+
+An error occurred at line: 89 in the jsp file: /photo.jsp
+Syntax error on token ".", ; expected
+86: </HEAD>
+87: <BODY>
+88: 
+89: <title>Hello <% username %> Image</title> 
+90: <header>
+91: <h1>
+92: <center>
+
+
+An error occurred at line: 89 in the jsp file: /photo.jsp
+The method write(String) is undefined for the type photo_jsp
+86: </HEAD>
+87: <BODY>
+88: 
+89: <title>Hello <% username %> Image</title> 
+90: <header>
+91: <h1>
+92: <center>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 2:26:54 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 49 in the jsp file: /photo.jsp
+user cannot be resolved to a variable
+46: 	    String desc = rset.getString(7);
+47: 
+48: 		//check if user is owner
+49: 	    if (username == user){
+50: 	    	String isOwner = "true";
+51: 		} else {isOwner = "false";}
+52: 
+
+
+An error occurred at line: 51 in the jsp file: /photo.jsp
+isOwner cannot be resolved to a variable
+48: 		//check if user is owner
+49: 	    if (username == user){
+50: 	    	String isOwner = "true";
+51: 		} else {isOwner = "false";}
+52: 
+53: 		boolean isInGroup;
+54: 	    //sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
+
+
+An error occurred at line: 102 in the jsp file: /photo.jsp
+isOwner cannot be resolved to a variable
+99:   <tr>
+100:     <td><img src="image?<%=pid%>"/></td>
+101:   </tr>
+102: <% if(isOwner == "true") { %>
+103: 	<CENTER>
+104: 		<TABLE>
+105: 			<TR VALIGN=TOP ALIGN=CENTER>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 2:27:16 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 51 in the jsp file: /photo.jsp
+isOwner cannot be resolved to a variable
+48: 		//check if user is owner
+49: 	    if (username == owner){
+50: 	    	String isOwner = "true";
+51: 		} else {isOwner = "false";}
+52: 
+53: 		boolean isInGroup;
+54: 	    //sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
+
+
+An error occurred at line: 102 in the jsp file: /photo.jsp
+isOwner cannot be resolved to a variable
+99:   <tr>
+100:     <td><img src="image?<%=pid%>"/></td>
+101:   </tr>
+102: <% if(isOwner == "true") { %>
+103: 	<CENTER>
+104: 		<TABLE>
+105: 			<TR VALIGN=TOP ALIGN=CENTER>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 2:29:50 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 50 in the jsp file: /photo.jsp
+toString cannot be resolved or is not a field
+47: 
+48: 	    String isOwner;
+49: 		//check if user is owner
+50: 	    if (username.toString == owner){
+51: 	    	isOwner = "true";
+52: 		} else {isOwner = "false";}
+53: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 2:30:24 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 50 in the jsp file: /photo.jsp
+Syntax error on token ")", ) expected after this token
+47: 
+48: 	    String isOwner;
+49: 		//check if user is owner
+50: 	    if (username.equals(owner){
+51: 	    	isOwner = "true";
+52: 		} else {isOwner = "false";}
+53: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:08:20 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 139 in the jsp file: /photo.jsp
+Cannot invoke trim() on the primitive type void
+136: 	</CENTER>
+137: <% 
+138: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=? and subject=? and description=? WHERE photo_id = ?") ;
+139: 	sql2.setString(1, request.getParameter("place")).trim());
+140: 	sql2.setString(2, request.getParameter("subject")).trim();
+141: 	sql2.setString(3, request.getParameter("desc")).trim();
+142: 
+
+
+An error occurred at line: 139 in the jsp file: /photo.jsp
+Syntax error on token ")", delete this token
+136: 	</CENTER>
+137: <% 
+138: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=? and subject=? and description=? WHERE photo_id = ?") ;
+139: 	sql2.setString(1, request.getParameter("place")).trim());
+140: 	sql2.setString(2, request.getParameter("subject")).trim();
+141: 	sql2.setString(3, request.getParameter("desc")).trim();
+142: 
+
+
+An error occurred at line: 140 in the jsp file: /photo.jsp
+Cannot invoke trim() on the primitive type void
+137: <% 
+138: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=? and subject=? and description=? WHERE photo_id = ?") ;
+139: 	sql2.setString(1, request.getParameter("place")).trim());
+140: 	sql2.setString(2, request.getParameter("subject")).trim();
+141: 	sql2.setString(3, request.getParameter("desc")).trim();
+142: 
+143:     try{
+
+
+An error occurred at line: 141 in the jsp file: /photo.jsp
+Cannot invoke trim() on the primitive type void
+138: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=? and subject=? and description=? WHERE photo_id = ?") ;
+139: 	sql2.setString(1, request.getParameter("place")).trim());
+140: 	sql2.setString(2, request.getParameter("subject")).trim();
+141: 	sql2.setString(3, request.getParameter("desc")).trim();
+142: 
+143:     try{
+144:         stmt1 = conn.createStatement();
+
+
+An error occurred at line: 144 in the jsp file: /photo.jsp
+stmt1 cannot be resolved to a variable
+141: 	sql2.setString(3, request.getParameter("desc")).trim();
+142: 
+143:     try{
+144:         stmt1 = conn.createStatement();
+145:         rset1 = stmt.executeQuery(sql);
+146:     }
+147: 
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+rset1 cannot be resolved to a variable
+142: 
+143:     try{
+144:         stmt1 = conn.createStatement();
+145:         rset1 = stmt.executeQuery(sql);
+146:     }
+147: 
+148:     catch(Exception ex){
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:08:36 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 139 in the jsp file: /photo.jsp
+Syntax error on token ")", delete this token
+136: 	</CENTER>
+137: <% 
+138: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=? and subject=? and description=? WHERE photo_id = ?") ;
+139: 	sql2.setString(1, request.getParameter("place")));
+140: 	sql2.setString(2, request.getParameter("subject"));
+141: 	sql2.setString(3, request.getParameter("desc"));
+142: 
+
+
+An error occurred at line: 144 in the jsp file: /photo.jsp
+stmt1 cannot be resolved to a variable
+141: 	sql2.setString(3, request.getParameter("desc"));
+142: 
+143:     try{
+144:         stmt1 = conn.createStatement();
+145:         rset1 = stmt.executeQuery(sql);
+146:     }
+147: 
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+rset1 cannot be resolved to a variable
+142: 
+143:     try{
+144:         stmt1 = conn.createStatement();
+145:         rset1 = stmt.executeQuery(sql);
+146:     }
+147: 
+148:     catch(Exception ex){
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:08:51 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 144 in the jsp file: /photo.jsp
+stmt1 cannot be resolved to a variable
+141: 	sql2.setString(3, request.getParameter("desc"));
+142: 
+143:     try{
+144:         stmt1 = conn.createStatement();
+145:         rset1 = stmt.executeQuery(sql);
+146:     }
+147: 
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+rset1 cannot be resolved to a variable
+142: 
+143:     try{
+144:         stmt1 = conn.createStatement();
+145:         rset1 = stmt.executeQuery(sql);
+146:     }
+147: 
+148:     catch(Exception ex){
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:09:20 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+The method executeQuery(String) in the type Statement is not applicable for the arguments (PreparedStatement)
+142: 
+143:     try{
+144:         stmt = conn.createStatement();
+145:         rset = stmt.executeQuery(sql2);
+146:     }
+147: 
+148:     catch(Exception ex){
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:10:17 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 144 in the jsp file: /photo.jsp
+stmt2 cannot be resolved
+141: 	sql2.setString(3, request.getParameter("desc"));
+142: 
+143:     try{
+144:         stmt2.execute();
+145: 	    stmt2.executeUpdate("commit");
+146:     }
+147: 
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+stmt2 cannot be resolved
+142: 
+143:     try{
+144:         stmt2.execute();
+145: 	    stmt2.executeUpdate("commit");
+146:     }
+147: 
+148:     catch(Exception ex){
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:11:40 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 142 in the jsp file: /photo.jsp
+Type mismatch: cannot convert from String to int
+139: 	sql2.setString(1, request.getParameter("places"));
+140: 	sql2.setString(2, request.getParameter("subject"));
+141: 	sql2.setString(3, request.getParameter("desc"));
+142: 	sql2.setString(4, request.getParameter(+pid+));
+143: 
+144:     try{
+145:         sql2.execute();
+
+
+An error occurred at line: 142 in the jsp file: /photo.jsp
+Syntax error on token "+", ++ expected
+139: 	sql2.setString(1, request.getParameter("places"));
+140: 	sql2.setString(2, request.getParameter("subject"));
+141: 	sql2.setString(3, request.getParameter("desc"));
+142: 	sql2.setString(4, request.getParameter(+pid+));
+143: 
+144:     try{
+145:         sql2.execute();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:23:58 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 141 in the jsp file: /photo.jsp
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+138: 	sql2.setString(1, request.getParameter("places"));
+139: 	sql2.setString(2, request.getParameter("subject"));
+140: 	sql2.setString(3, request.getParameter("desc"));
+141: 	sql2.setInt(4, request.getParameter(pid));
+142: 
+143:     try{
+144:         sql2.execute();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:24:12 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 141 in the jsp file: /photo.jsp
+The method setInteger(int, String) is undefined for the type PreparedStatement
+138: 	sql2.setString(1, request.getParameter("places"));
+139: 	sql2.setString(2, request.getParameter("subject"));
+140: 	sql2.setString(3, request.getParameter("desc"));
+141: 	sql2.setInteger(4, request.getParameter(pid));
+142: 
+143:     try{
+144:         sql2.execute();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:24:39 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 141 in the jsp file: /photo.jsp
+The method setInteger(int, String) is undefined for the type PreparedStatement
+138: 	sql2.setString(1, request.getParameter("places"));
+139: 	sql2.setString(2, request.getParameter("subject"));
+140: 	sql2.setString(3, request.getParameter("desc"));
+141: 	sql2.setInteger(4, pid);
+142: 
+143:     try{
+144:         sql2.execute();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:25:15 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 137 in the jsp file: /photo.jsp
+The method prepareStatement(String, int) in the type Connection is not applicable for the arguments (String, String)
+134: 		</TABLE>
+135: 	</CENTER>
+136: <% 
+137: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="pid";") ;
+138: 	sql2.setString(1, request.getParameter("places"));
+139: 	sql2.setString(2, request.getParameter("subject"));
+140: 	sql2.setString(3, request.getParameter("desc"));
+
+
+An error occurred at line: 137 in the jsp file: /photo.jsp
+Syntax error on token "pid", , expected
+134: 		</TABLE>
+135: 	</CENTER>
+136: <% 
+137: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="pid";") ;
+138: 	sql2.setString(1, request.getParameter("places"));
+139: 	sql2.setString(2, request.getParameter("subject"));
+140: 	sql2.setString(3, request.getParameter("desc"));
+
+
+An error occurred at line: 141 in the jsp file: /photo.jsp
+The method setInteger(int, String) is undefined for the type PreparedStatement
+138: 	sql2.setString(1, request.getParameter("places"));
+139: 	sql2.setString(2, request.getParameter("subject"));
+140: 	sql2.setString(3, request.getParameter("desc"));
+141: 	sql2.setInteger(4, pid);
+142: 
+143:     try{
+144:         sql2.execute();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:25:29 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 137 in the jsp file: /photo.jsp
+The method prepareStatement(String, int) in the type Connection is not applicable for the arguments (String, String)
+134: 		</TABLE>
+135: 	</CENTER>
+136: <% 
+137: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="pid";") ;
+138: 	sql2.setString(1, request.getParameter("places"));
+139: 	sql2.setString(2, request.getParameter("subject"));
+140: 	sql2.setString(3, request.getParameter("desc"));
+
+
+An error occurred at line: 137 in the jsp file: /photo.jsp
+Syntax error on token "pid", , expected
+134: 		</TABLE>
+135: 	</CENTER>
+136: <% 
+137: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="pid";") ;
+138: 	sql2.setString(1, request.getParameter("places"));
+139: 	sql2.setString(2, request.getParameter("subject"));
+140: 	sql2.setString(3, request.getParameter("desc"));
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:29:11 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 144 in the jsp file: /photo.jsp
+Syntax error on token "}", @ expected
+141:     try{
+142:         sql2.execute();
+143: 	    sql2.executeUpdate("commit");
+144:     }
+145: UPDATE images SET place='newplace', subject='newsub', description='desc' WHERE photo_id =101;
+146:     catch(Exception ex){
+147:         out.println("<hr>" + ex.getMessage() + "<hr>");
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+images cannot be resolved to a type
+142:         sql2.execute();
+143: 	    sql2.executeUpdate("commit");
+144:     }
+145: UPDATE images SET place='newplace', subject='newsub', description='desc' WHERE photo_id =101;
+146:     catch(Exception ex){
+147:         out.println("<hr>" + ex.getMessage() + "<hr>");
+148:     }
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+142:         sql2.execute();
+143: 	    sql2.executeUpdate("commit");
+144:     }
+145: UPDATE images SET place='newplace', subject='newsub', description='desc' WHERE photo_id =101;
+146:     catch(Exception ex){
+147:         out.println("<hr>" + ex.getMessage() + "<hr>");
+148:     }
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+Invalid character constant
+142:         sql2.execute();
+143: 	    sql2.executeUpdate("commit");
+144:     }
+145: UPDATE images SET place='newplace', subject='newsub', description='desc' WHERE photo_id =101;
+146:     catch(Exception ex){
+147:         out.println("<hr>" + ex.getMessage() + "<hr>");
+148:     }
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+Invalid character constant
+142:         sql2.execute();
+143: 	    sql2.executeUpdate("commit");
+144:     }
+145: UPDATE images SET place='newplace', subject='newsub', description='desc' WHERE photo_id =101;
+146:     catch(Exception ex){
+147:         out.println("<hr>" + ex.getMessage() + "<hr>");
+148:     }
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+Syntax error on token ",", delete this token
+142:         sql2.execute();
+143: 	    sql2.executeUpdate("commit");
+144:     }
+145: UPDATE images SET place='newplace', subject='newsub', description='desc' WHERE photo_id =101;
+146:     catch(Exception ex){
+147:         out.println("<hr>" + ex.getMessage() + "<hr>");
+148:     }
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+Syntax error on token ",", delete this token
+142:         sql2.execute();
+143: 	    sql2.executeUpdate("commit");
+144:     }
+145: UPDATE images SET place='newplace', subject='newsub', description='desc' WHERE photo_id =101;
+146:     catch(Exception ex){
+147:         out.println("<hr>" + ex.getMessage() + "<hr>");
+148:     }
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+Syntax error, insert ";" to complete Statement
+142:         sql2.execute();
+143: 	    sql2.executeUpdate("commit");
+144:     }
+145: UPDATE images SET place='newplace', subject='newsub', description='desc' WHERE photo_id =101;
+146:     catch(Exception ex){
+147:         out.println("<hr>" + ex.getMessage() + "<hr>");
+148:     }
+
+
+An error occurred at line: 145 in the jsp file: /photo.jsp
+Syntax error, insert "}" to complete Block
+142:         sql2.execute();
+143: 	    sql2.executeUpdate("commit");
+144:     }
+145: UPDATE images SET place='newplace', subject='newsub', description='desc' WHERE photo_id =101;
+146:     catch(Exception ex){
+147:         out.println("<hr>" + ex.getMessage() + "<hr>");
+148:     }
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:33:45 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 91 in the jsp file: /photo.jsp
+userName cannot be resolved to a variable
+88: <header>
+89: <h1>
+90: <center>
+91: Hello <%=userName%> - Image 
+92: </center>
+93: </h1>
+94: </header>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:39:33 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 166 in the jsp file: /photo.jsp
+Syntax error, insert "AssignmentOperator Expression" to complete Assignment
+163: 
+164: <%
+165:  if(request.getParameter("OK") != null)
+166: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id =+pid+;") ;
+167: 	sql2.setString(1, request.getParameter("places"));
+168: 	sql2.setString(2, request.getParameter("subject"));
+169: 	sql2.setString(3, request.getParameter("desc"));
+
+
+An error occurred at line: 166 in the jsp file: /photo.jsp
+Syntax error, insert ";" to complete Statement
+163: 
+164: <%
+165:  if(request.getParameter("OK") != null)
+166: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id =+pid+;") ;
+167: 	sql2.setString(1, request.getParameter("places"));
+168: 	sql2.setString(2, request.getParameter("subject"));
+169: 	sql2.setString(3, request.getParameter("desc"));
+
+
+An error occurred at line: 166 in the jsp file: /photo.jsp
+PreparedStatement cannot be resolved to a variable
+163: 
+164: <%
+165:  if(request.getParameter("OK") != null)
+166: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id =+pid+;") ;
+167: 	sql2.setString(1, request.getParameter("places"));
+168: 	sql2.setString(2, request.getParameter("subject"));
+169: 	sql2.setString(3, request.getParameter("desc"));
+
+
+An error occurred at line: 166 in the jsp file: /photo.jsp
+sql2 cannot be resolved to a variable
+163: 
+164: <%
+165:  if(request.getParameter("OK") != null)
+166: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id =+pid+;") ;
+167: 	sql2.setString(1, request.getParameter("places"));
+168: 	sql2.setString(2, request.getParameter("subject"));
+169: 	sql2.setString(3, request.getParameter("desc"));
+
+
+An error occurred at line: 167 in the jsp file: /photo.jsp
+sql2 cannot be resolved
+164: <%
+165:  if(request.getParameter("OK") != null)
+166: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id =+pid+;") ;
+167: 	sql2.setString(1, request.getParameter("places"));
+168: 	sql2.setString(2, request.getParameter("subject"));
+169: 	sql2.setString(3, request.getParameter("desc"));
+170:     try{
+
+
+An error occurred at line: 168 in the jsp file: /photo.jsp
+sql2 cannot be resolved
+165:  if(request.getParameter("OK") != null)
+166: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id =+pid+;") ;
+167: 	sql2.setString(1, request.getParameter("places"));
+168: 	sql2.setString(2, request.getParameter("subject"));
+169: 	sql2.setString(3, request.getParameter("desc"));
+170:     try{
+171:         sql2.execute();
+
+
+An error occurred at line: 169 in the jsp file: /photo.jsp
+sql2 cannot be resolved
+166: 	PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id =+pid+;") ;
+167: 	sql2.setString(1, request.getParameter("places"));
+168: 	sql2.setString(2, request.getParameter("subject"));
+169: 	sql2.setString(3, request.getParameter("desc"));
+170:     try{
+171:         sql2.execute();
+172: 	    sql2.executeUpdate("commit");
+
+
+An error occurred at line: 171 in the jsp file: /photo.jsp
+sql2 cannot be resolved
+168: 	sql2.setString(2, request.getParameter("subject"));
+169: 	sql2.setString(3, request.getParameter("desc"));
+170:     try{
+171:         sql2.execute();
+172: 	    sql2.executeUpdate("commit");
+173:     }
+174: 
+
+
+An error occurred at line: 172 in the jsp file: /photo.jsp
+sql2 cannot be resolved
+169: 	sql2.setString(3, request.getParameter("desc"));
+170:     try{
+171:         sql2.execute();
+172: 	    sql2.executeUpdate("commit");
+173:     }
+174: 
+175:     catch(Exception ex){
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:40:31 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 182 in the jsp file: /photo.jsp
+Syntax error, insert "Finally" to complete TryStatement
+179: %>
+180: 	</body>
+181: </HTML>
+182: <%}%>
+
+
+An error occurred at line: 268 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 270 in the generated java file
+out cannot be resolved to a variable
+
+An error occurred at line: 270 in the generated java file
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: 271 in the generated java file
+out cannot be resolved to a variable
+
+An error occurred at line: 271 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 272 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 273 in the generated java file
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: 273 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 275 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 276 in the generated java file
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:56:51 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /updated.jsp
+PreparedStatement cannot be resolved to a type
+6:     <body>
+7:         <%
+8:              if (request.getParameter("OK") != null) {
+9:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id =+pid+;") ;
+10:                 sql2.setString(1, request.getParameter("place"));
+11:                 sql2.setString(2, request.getParameter("subject"));
+12:                 sql2.setString(3, request.getParameter("desc"));
+
+
+An error occurred at line: 9 in the jsp file: /updated.jsp
+conn cannot be resolved
+6:     <body>
+7:         <%
+8:              if (request.getParameter("OK") != null) {
+9:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id =+pid+;") ;
+10:                 sql2.setString(1, request.getParameter("place"));
+11:                 sql2.setString(2, request.getParameter("subject"));
+12:                 sql2.setString(3, request.getParameter("desc"));
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 3:58:14 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 13 in the jsp file: /updated.jsp
+Connection cannot be resolved to a type
+10: 
+11:                 String pid = request.getQueryString();
+12: 
+13:                 Connection conn = null;
+14:                 String driverName = "oracle.jdbc.driver.OracleDriver";
+15:                 String dbstring = "jdbc:oracle:thin:@gwynne.cs.ualberta.ca:1521:CRS";
+16:                 Class drvClass = Class.forName(driverName); 
+
+
+An error occurred at line: 17 in the jsp file: /updated.jsp
+DriverManager cannot be resolved
+14:                 String driverName = "oracle.jdbc.driver.OracleDriver";
+15:                 String dbstring = "jdbc:oracle:thin:@gwynne.cs.ualberta.ca:1521:CRS";
+16:                 Class drvClass = Class.forName(driverName); 
+17:                 DriverManager.registerDriver((Driver)
+18:                 drvClass.newInstance());
+19: 
+20:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+
+
+An error occurred at line: 17 in the jsp file: /updated.jsp
+Driver cannot be resolved to a type
+14:                 String driverName = "oracle.jdbc.driver.OracleDriver";
+15:                 String dbstring = "jdbc:oracle:thin:@gwynne.cs.ualberta.ca:1521:CRS";
+16:                 Class drvClass = Class.forName(driverName); 
+17:                 DriverManager.registerDriver((Driver)
+18:                 drvClass.newInstance());
+19: 
+20:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+
+
+An error occurred at line: 20 in the jsp file: /updated.jsp
+DriverManager cannot be resolved
+17:                 DriverManager.registerDriver((Driver)
+18:                 drvClass.newInstance());
+19: 
+20:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+21:                 conn.setAutoCommit(false);
+22: 
+23: 
+
+
+An error occurred at line: 25 in the jsp file: /updated.jsp
+PreparedStatement cannot be resolved to a type
+22: 
+23: 
+24:              if (request.getParameter("OK") != null) {
+25:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id =+pid+;") ;
+26:                 sql2.setString(1, request.getParameter("place"));
+27:                 sql2.setString(2, request.getParameter("subject"));
+28:                 sql2.setString(3, request.getParameter("desc"));
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 4:00:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.sql.SQLException: Invalid column index
+	at oracle.jdbc.driver.OraclePreparedStatement.setStringInternal(OraclePreparedStatement.java:5168)
+	at oracle.jdbc.driver.OraclePreparedStatement.setString(OraclePreparedStatement.java:5156)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.setString(OraclePreparedStatementWrapper.java:278)
+	at org.apache.jsp.updated_jsp._jspService(updated_jsp.java:84)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 4:06:18 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+UPDATE cannot be resolved to a type
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place='?', subject='?', description='?'' WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place='?', subject='?', description='?'' WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+SET cannot be resolved to a type
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place='?', subject='?', description='?'' WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+sub cannot be resolved to a variable
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place='?', subject='?', description='?'' WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place='?', subject='?', description='?'' WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+desc cannot be resolved to a variable
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place='?', subject='?', description='?'' WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+WHERE cannot be resolved to a type
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place='?', subject='?', description='?'' WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 4:07:17 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+UPDATE cannot be resolved to a type
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+SET cannot be resolved to a type
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+sub cannot be resolved to a variable
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+desc cannot be resolved to a variable
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+An error occurred at line: 26 in the jsp file: /updated.jsp
+WHERE cannot be resolved to a type
+23:                 conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+24:                 conn.setAutoCommit(false);
+25: 
+26:                 UPDATE images SET place=place, subject=sub, description=desc WHERE photo_id = 101;
+27:              if (request.getParameter("OK") != null) {
+28:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="+pid+";") ;
+29:                 out.println(request.getParameter("place"));
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 4:19:48 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+picid cannot be resolved to a type
+104: 		<TABLE>
+105: 			TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>Place:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%picid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+Duplicate local variable out
+104: 		<TABLE>
+105: 			TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>Place:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%picid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+Syntax error on token ".", ; expected
+104: 		<TABLE>
+105: 			TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>Place:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%picid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+The method write(String) is undefined for the type photo_jsp
+104: 		<TABLE>
+105: 			TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>Place:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%picid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 4:20:20 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+pid cannot be resolved to a type
+104: 		<TABLE>
+105: 			TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>ID Number:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%pid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+Duplicate local variable out
+104: 		<TABLE>
+105: 			TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>ID Number:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%pid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+Syntax error on token ".", ; expected
+104: 		<TABLE>
+105: 			TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>ID Number:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%pid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+The method write(String) is undefined for the type photo_jsp
+104: 		<TABLE>
+105: 			TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>ID Number:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%pid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 4:34:13 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 28 in the jsp file: /updated.jsp
+get cannot be resolved or is not a field
+25: 
+26:              if (request.getParameter("OK") != null) {
+27:                 PreparedStatement sql2 = conn.prepareStatement("UPDATE images SET place=?, subject=?, description=? WHERE photo_id ="+pid);
+28:                 out.println(request.get);
+29: 
+30:                 out.println(request.getParameter("place"));
+31:                 out.println(request.getParameter("subject"));
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 4:38:17 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+pid cannot be resolved to a type
+104: 		<TABLE>
+105: 			<TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>ID Number:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%pid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+Duplicate local variable out
+104: 		<TABLE>
+105: 			<TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>ID Number:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%pid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+Syntax error on token ".", ; expected
+104: 		<TABLE>
+105: 			<TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>ID Number:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%pid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+An error occurred at line: 107 in the jsp file: /photo.jsp
+The method write(String) is undefined for the type photo_jsp
+104: 		<TABLE>
+105: 			<TR VALIGN=TOP ALIGN=CENTER>
+106: 				<TD><B><I>ID Number:</I></B></TD>
+107: 				<TD><INPUT TYPE="text" NAME="imgid" value="<%pid%>"><BR></TD>
+108: 			</TR>
+109: 			<TR VALIGN=TOP ALIGN=CENTER>
+110: 				<TD><B><I>Place:</I></B></TD>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 5:02:52 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 8 in the jsp file: /searchScreen.jsp
+Syntax error on token "else", delete this token
+5: 	}
+6: 	String query = (String)request.getSession().getAttribute("imageView");
+7: 	
+8: else{
+9: %>
+10: 
+11: <HTML>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 5:57:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 51 in the jsp file: /upload.jsp
+group_names cannot be resolved
+48: 					<select name="permitted">
+49: 						<option value="2">Private</option>
+50: 				    	<option value="1">Public</option>
+51: 				    	<% for (int i = 0; i < group_names.size(); i++) { %>
+52: 				    		<option value="<%=group_ids.get(i)%>"><%=group_names.get(i)%></option>
+53: 				    	<% } %>
+54: 					</select>
+
+
+An error occurred at line: 52 in the jsp file: /upload.jsp
+group_ids cannot be resolved
+49: 						<option value="2">Private</option>
+50: 				    	<option value="1">Public</option>
+51: 				    	<% for (int i = 0; i < group_names.size(); i++) { %>
+52: 				    		<option value="<%=group_ids.get(i)%>"><%=group_names.get(i)%></option>
+53: 				    	<% } %>
+54: 					</select>
+55: 				</TD>
+
+
+An error occurred at line: 52 in the jsp file: /upload.jsp
+group_names cannot be resolved
+49: 						<option value="2">Private</option>
+50: 				    	<option value="1">Public</option>
+51: 				    	<% for (int i = 0; i < group_names.size(); i++) { %>
+52: 				    		<option value="<%=group_ids.get(i)%>"><%=group_names.get(i)%></option>
+53: 				    	<% } %>
+54: 					</select>
+55: 				</TD>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 5:59:02 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 178 in the generated java file
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: 188 in the generated java file
+Syntax error on token "}", delete this token
+
+An error occurred at line: 189 in the generated java file
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 6:36:43 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 57 in the jsp file: /temp.jsp
+place1 cannot be resolved to a type
+54: 			<TABLE>
+55: 				<TR VALIGN=TOP ALIGN=CENTER>
+56: 					<TD><B><I>Place:</I></B></TD>
+57: 					<TD><INPUT TYPE="text" NAME="place" value= <% place1 %> ><BR></TD>
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+
+
+An error occurred at line: 57 in the jsp file: /temp.jsp
+Duplicate local variable out
+54: 			<TABLE>
+55: 				<TR VALIGN=TOP ALIGN=CENTER>
+56: 					<TD><B><I>Place:</I></B></TD>
+57: 					<TD><INPUT TYPE="text" NAME="place" value= <% place1 %> ><BR></TD>
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+
+
+An error occurred at line: 57 in the jsp file: /temp.jsp
+Syntax error on token ".", ; expected
+54: 			<TABLE>
+55: 				<TR VALIGN=TOP ALIGN=CENTER>
+56: 					<TD><B><I>Place:</I></B></TD>
+57: 					<TD><INPUT TYPE="text" NAME="place" value= <% place1 %> ><BR></TD>
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+
+
+An error occurred at line: 57 in the jsp file: /temp.jsp
+The method write(String) is undefined for the type temp_jsp
+54: 			<TABLE>
+55: 				<TR VALIGN=TOP ALIGN=CENTER>
+56: 					<TD><B><I>Place:</I></B></TD>
+57: 					<TD><INPUT TYPE="text" NAME="place" value= <% place1 %> ><BR></TD>
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+
+
+An error occurred at line: 61 in the jsp file: /temp.jsp
+timing1 cannot be resolved to a type
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+61: 					<TD><INPUT TYPE="date" NAME="timing" value= <% timing1 %>></TD>
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+
+
+An error occurred at line: 61 in the jsp file: /temp.jsp
+Duplicate local variable out
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+61: 					<TD><INPUT TYPE="date" NAME="timing" value= <% timing1 %>></TD>
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+
+
+An error occurred at line: 61 in the jsp file: /temp.jsp
+Syntax error on token ".", ; expected
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+61: 					<TD><INPUT TYPE="date" NAME="timing" value= <% timing1 %>></TD>
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+
+
+An error occurred at line: 61 in the jsp file: /temp.jsp
+The method write(String) is undefined for the type temp_jsp
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+61: 					<TD><INPUT TYPE="date" NAME="timing" value= <% timing1 %>></TD>
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+
+
+An error occurred at line: 65 in the jsp file: /temp.jsp
+subject1 cannot be resolved to a type
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+65: 					<TD><INPUT TYPE="text" NAME="subject" value= <% subject1 %>></TD>
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+
+
+An error occurred at line: 65 in the jsp file: /temp.jsp
+Duplicate local variable out
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+65: 					<TD><INPUT TYPE="text" NAME="subject" value= <% subject1 %>></TD>
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+
+
+An error occurred at line: 65 in the jsp file: /temp.jsp
+Syntax error on token ".", ; expected
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+65: 					<TD><INPUT TYPE="text" NAME="subject" value= <% subject1 %>></TD>
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+
+
+An error occurred at line: 65 in the jsp file: /temp.jsp
+The method write(String) is undefined for the type temp_jsp
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+65: 					<TD><INPUT TYPE="text" NAME="subject" value= <% subject1 %>></TD>
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+
+
+An error occurred at line: 69 in the jsp file: /temp.jsp
+desc1 cannot be resolved to a type
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+69: 					<TD><TEXTAREA style="resize:none;" NAME="desc" value= <% desc1 %>></TEXTAREA></TD>
+70: 				</TR>
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+
+
+An error occurred at line: 69 in the jsp file: /temp.jsp
+Duplicate local variable out
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+69: 					<TD><TEXTAREA style="resize:none;" NAME="desc" value= <% desc1 %>></TEXTAREA></TD>
+70: 				</TR>
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+
+
+An error occurred at line: 69 in the jsp file: /temp.jsp
+Syntax error on token ".", ; expected
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+69: 					<TD><TEXTAREA style="resize:none;" NAME="desc" value= <% desc1 %>></TEXTAREA></TD>
+70: 				</TR>
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+
+
+An error occurred at line: 69 in the jsp file: /temp.jsp
+The method write(String) is undefined for the type temp_jsp
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+69: 					<TD><TEXTAREA style="resize:none;" NAME="desc" value= <% desc1 %>></TEXTAREA></TD>
+70: 				</TR>
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+
+
+An error occurred at line: 74 in the jsp file: /temp.jsp
+permitted1 cannot be resolved to a type
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+73: 				<TD><B><I>Access:</I></B></TD>
+74: 					<TD><input type="text" NAME="groupid" value = <% permitted1 %>></TD>
+75: 				</TR>
+76: 			</TABLE>
+77: 		</CENTER>
+
+
+An error occurred at line: 74 in the jsp file: /temp.jsp
+Duplicate local variable out
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+73: 				<TD><B><I>Access:</I></B></TD>
+74: 					<TD><input type="text" NAME="groupid" value = <% permitted1 %>></TD>
+75: 				</TR>
+76: 			</TABLE>
+77: 		</CENTER>
+
+
+An error occurred at line: 74 in the jsp file: /temp.jsp
+Syntax error on token ".", ; expected
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+73: 				<TD><B><I>Access:</I></B></TD>
+74: 					<TD><input type="text" NAME="groupid" value = <% permitted1 %>></TD>
+75: 				</TR>
+76: 			</TABLE>
+77: 		</CENTER>
+
+
+An error occurred at line: 74 in the jsp file: /temp.jsp
+The method write(String) is undefined for the type temp_jsp
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+73: 				<TD><B><I>Access:</I></B></TD>
+74: 					<TD><input type="text" NAME="groupid" value = <% permitted1 %>></TD>
+75: 				</TR>
+76: 			</TABLE>
+77: 		</CENTER>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 6:37:31 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 61 in the jsp file: /temp.jsp
+timing1 cannot be resolved to a type
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+61: 					<TD><INPUT TYPE="date" NAME="timing" value= <% timing1 %>></TD>
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+
+
+An error occurred at line: 61 in the jsp file: /temp.jsp
+Duplicate local variable out
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+61: 					<TD><INPUT TYPE="date" NAME="timing" value= <% timing1 %>></TD>
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+
+
+An error occurred at line: 61 in the jsp file: /temp.jsp
+Syntax error on token ".", ; expected
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+61: 					<TD><INPUT TYPE="date" NAME="timing" value= <% timing1 %>></TD>
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+
+
+An error occurred at line: 61 in the jsp file: /temp.jsp
+The method write(String) is undefined for the type temp_jsp
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+61: 					<TD><INPUT TYPE="date" NAME="timing" value= <% timing1 %>></TD>
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+
+
+An error occurred at line: 65 in the jsp file: /temp.jsp
+subject1 cannot be resolved to a type
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+65: 					<TD><INPUT TYPE="text" NAME="subject" value= <% subject1 %>></TD>
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+
+
+An error occurred at line: 65 in the jsp file: /temp.jsp
+Duplicate local variable out
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+65: 					<TD><INPUT TYPE="text" NAME="subject" value= <% subject1 %>></TD>
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+
+
+An error occurred at line: 65 in the jsp file: /temp.jsp
+Syntax error on token ".", ; expected
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+65: 					<TD><INPUT TYPE="text" NAME="subject" value= <% subject1 %>></TD>
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+
+
+An error occurred at line: 65 in the jsp file: /temp.jsp
+The method write(String) is undefined for the type temp_jsp
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+65: 					<TD><INPUT TYPE="text" NAME="subject" value= <% subject1 %>></TD>
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+
+
+An error occurred at line: 69 in the jsp file: /temp.jsp
+desc1 cannot be resolved to a type
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+69: 					<TD><TEXTAREA style="resize:none;" NAME="desc" value= <% desc1 %>></TEXTAREA></TD>
+70: 				</TR>
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+
+
+An error occurred at line: 69 in the jsp file: /temp.jsp
+Duplicate local variable out
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+69: 					<TD><TEXTAREA style="resize:none;" NAME="desc" value= <% desc1 %>></TEXTAREA></TD>
+70: 				</TR>
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+
+
+An error occurred at line: 69 in the jsp file: /temp.jsp
+Syntax error on token ".", ; expected
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+69: 					<TD><TEXTAREA style="resize:none;" NAME="desc" value= <% desc1 %>></TEXTAREA></TD>
+70: 				</TR>
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+
+
+An error occurred at line: 69 in the jsp file: /temp.jsp
+The method write(String) is undefined for the type temp_jsp
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+69: 					<TD><TEXTAREA style="resize:none;" NAME="desc" value= <% desc1 %>></TEXTAREA></TD>
+70: 				</TR>
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+
+
+An error occurred at line: 74 in the jsp file: /temp.jsp
+permitted1 cannot be resolved to a type
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+73: 				<TD><B><I>Access:</I></B></TD>
+74: 					<TD><input type="text" NAME="groupid" value = <% permitted1 %>></TD>
+75: 				</TR>
+76: 			</TABLE>
+77: 		</CENTER>
+
+
+An error occurred at line: 74 in the jsp file: /temp.jsp
+Duplicate local variable out
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+73: 				<TD><B><I>Access:</I></B></TD>
+74: 					<TD><input type="text" NAME="groupid" value = <% permitted1 %>></TD>
+75: 				</TR>
+76: 			</TABLE>
+77: 		</CENTER>
+
+
+An error occurred at line: 74 in the jsp file: /temp.jsp
+Syntax error on token ".", ; expected
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+73: 				<TD><B><I>Access:</I></B></TD>
+74: 					<TD><input type="text" NAME="groupid" value = <% permitted1 %>></TD>
+75: 				</TR>
+76: 			</TABLE>
+77: 		</CENTER>
+
+
+An error occurred at line: 74 in the jsp file: /temp.jsp
+The method write(String) is undefined for the type temp_jsp
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+73: 				<TD><B><I>Access:</I></B></TD>
+74: 					<TD><input type="text" NAME="groupid" value = <% permitted1 %>></TD>
+75: 				</TR>
+76: 			</TABLE>
+77: 		</CENTER>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 6:38:16 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 61 in the jsp file: /temp.jsp
+Syntax error, insert ";" to complete Statement
+58: 				</TR>
+59: 				<TR VALIGN=TOP ALIGN=CENTER>
+60: 					<TD><B><I>Date:</I></B></TD>
+61: 					<TD><INPUT TYPE="date" NAME="timing" value= <% out.println(timing1) %>></TD>
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+
+
+An error occurred at line: 65 in the jsp file: /temp.jsp
+Syntax error, insert ";" to complete Statement
+62: 				</TR>
+63: 				<TR VALIGN=TOP ALIGN=CENTER>
+64: 					<TD><B><I>Subject:</I></B></TD>
+65: 					<TD><INPUT TYPE="text" NAME="subject" value= <% out.println(subject1) %>></TD>
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+
+
+An error occurred at line: 69 in the jsp file: /temp.jsp
+Syntax error, insert ";" to complete Statement
+66: 				</TR>
+67: 				<TR VALIGN=TOP ALIGN=CENTER>
+68: 					<TD><B><I>Description:</I></B></TD>
+69: 					<TD><TEXTAREA style="resize:none;" NAME="desc" value= <% out.println(desc1) %>></TEXTAREA></TD>
+70: 				</TR>
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+
+
+An error occurred at line: 74 in the jsp file: /temp.jsp
+Syntax error, insert ";" to complete Statement
+71: 
+72: 				<TR VALIGN=TOP ALIGN=CENTER>
+73: 				<TD><B><I>Access:</I></B></TD>
+74: 					<TD><input type="text" NAME="groupid" value = <% out.println(permitted1) %>></TD>
+75: 				</TR>
+76: 			</TABLE>
+77: 		</CENTER>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 6:41:54 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 16 in the jsp file: /temp.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+13: 	    String subject1 = request.getParameter("subject");
+14: 	    String desc1 = request.getParameter("desc");
+15: 	    String permitted1 = request.getParameter("permitted");
+16: 	    String fp = request.getParameter("file-path")
+17: 
+18: 
+19: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 6:54:40 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 51 in the jsp file: /upload.jsp
+group_names cannot be resolved
+48: 					<select name="permitted">
+49: 						<option value="2">Private</option>
+50: 				    	<option value="1">Public</option>
+51: 				    	<% for (int i = 0; i < group_names.size(); i++) { %>
+52: 				    		<option value="<%=group_ids.get(i)%>"><%=group_names.get(i)%></option>
+53: 				    	<% } %>
+54: 					</select>
+
+
+An error occurred at line: 52 in the jsp file: /upload.jsp
+group_ids cannot be resolved
+49: 						<option value="2">Private</option>
+50: 				    	<option value="1">Public</option>
+51: 				    	<% for (int i = 0; i < group_names.size(); i++) { %>
+52: 				    		<option value="<%=group_ids.get(i)%>"><%=group_names.get(i)%></option>
+53: 				    	<% } %>
+54: 					</select>
+55: 				</TD>
+
+
+An error occurred at line: 52 in the jsp file: /upload.jsp
+group_names cannot be resolved
+49: 						<option value="2">Private</option>
+50: 				    	<option value="1">Public</option>
+51: 				    	<% for (int i = 0; i < group_names.size(); i++) { %>
+52: 				    		<option value="<%=group_ids.get(i)%>"><%=group_names.get(i)%></option>
+53: 				    	<% } %>
+54: 					</select>
+55: 				</TD>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 6:55:06 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 178 in the generated java file
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: 188 in the generated java file
+Syntax error on token "}", delete this token
+
+An error occurred at line: 189 in the generated java file
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:321)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:328)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 7:32:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.sql.SQLException: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:439)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:388)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:381)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:564)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:431)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:436)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:186)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:366)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:752)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:359)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at java.sql.DriverManager.getConnection(DriverManager.java:615)
+	at java.sql.DriverManager.getConnection(DriverManager.java:195)
+	at org.apache.jsp.photo_jsp._jspService(photo_jsp.java:76)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 7:32:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.sql.SQLException: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:439)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:388)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:381)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:564)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:431)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:436)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:186)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:366)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:752)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:359)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at java.sql.DriverManager.getConnection(DriverManager.java:615)
+	at java.sql.DriverManager.getConnection(DriverManager.java:195)
+	at org.apache.jsp.photo_jsp._jspService(photo_jsp.java:76)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 7:32:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.sql.SQLException: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:439)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:388)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:381)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:564)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:431)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:436)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:186)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:366)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:752)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:359)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at java.sql.DriverManager.getConnection(DriverManager.java:615)
+	at java.sql.DriverManager.getConnection(DriverManager.java:195)
+	at org.apache.jsp.photo_jsp._jspService(photo_jsp.java:76)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)
+Nov 24, 2014 7:32:19 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.sql.SQLException: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:439)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:388)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:381)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:564)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:431)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:436)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:186)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:366)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:752)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:359)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:531)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:221)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:503)
+	at java.sql.DriverManager.getConnection(DriverManager.java:615)
+	at java.sql.DriverManager.getConnection(DriverManager.java:195)
+	at org.apache.jsp.photo_jsp._jspService(photo_jsp.java:76)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:388)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:602)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:701)

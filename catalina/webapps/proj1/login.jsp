@@ -2,6 +2,7 @@
 
     String name = request.getParameter( "USERID" );
     session.setAttribute( "userName", name );
+    session.setAttribute( "imageView", null);
 %>
 
 <HTML>

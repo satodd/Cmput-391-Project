@@ -6,7 +6,7 @@ import javax.servlet.jsp.*;
 import java.sql.*;
 import java.util.*;
 
-public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class temp_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -61,46 +61,27 @@ public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
     out.println("<h1><CENTER>Unauthorized access</CENTER></H1>");
   }
 else{
+	
+	    String place1 = request.getParameter("place");
+	    String timing1 = request.getParameter("timing");
+	    String subject1 = request.getParameter("subject");
+	    String desc1 = request.getParameter("desc");
+	    String permitted1 = request.getParameter("permitted");
+	    String fp = request.getParameter("file-path");
 
-  Connection conn = null;
-    String driverName = "oracle.jdbc.driver.OracleDriver";
-    String dbstring = "jdbc:oracle:thin:@gwynne.cs.ualberta.ca:1521:CRS";
-  Class drvClass = Class.forName(driverName); 
-  DriverManager.registerDriver((Driver)
-    drvClass.newInstance());
-    conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
-  conn.setAutoCommit(false);
-  Statement stmt = null;
-  ResultSet rset = null;
-  String sql;
 
-  if(!username.equals("admin")){
-    sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
-  }
-  else{
-    sql = "SELECT group_id, group_name FROM groups";
-  }
-    try{
-        stmt = conn.createStatement();
-        rset = stmt.executeQuery(sql);
-    }
-    catch(Exception ex){
-        out.println("<hr>" + ex.getMessage() + "<hr>");
-    }
-    ArrayList<Integer> group_ids = new ArrayList<Integer>();
-    ArrayList<String> group_names = new ArrayList<String>();
-    out.println("<P>Signed in as "+username+" </p>");
-    if (rset == null) return;
-    while(rset.next()) {
-      group_ids.add(rset.getInt(1));
-      group_names.add(rset.getString(2));
-  }
 
       out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
-      out.write("<HTML>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<HEAD>\n");
       out.write("<TITLE>Upload</TITLE>\n");
       out.write("</HEAD>\n");
@@ -121,7 +102,9 @@ else{
       out.write("<table>\n");
       out.write("  <tr>\n");
       out.write("    <th>File path: </th>\n");
-      out.write("    <td><input name=\"file-path\" type=\"file\" size=\"30\" ></input></td>\n");
+      out.write("    <td><input name=\"file-path\" type=\"file\" size=\"30\" value =");
+out.println(fp);
+      out.write(" ></input></td>\n");
       out.write("  </tr>\n");
       out.write("\n");
       out.write("<!-- -providing some required information, including a unique user name, password, first name, last name, address, email, and phone number -->\n");
@@ -129,42 +112,35 @@ else{
       out.write("\t\t\t<TABLE>\n");
       out.write("\t\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("\t\t\t\t\t<TD><B><I>Place:</I></B></TD>\n");
-      out.write("\t\t\t\t\t<TD><INPUT TYPE=\"text\" NAME=\"place\"><BR></TD>\n");
+      out.write("\t\t\t\t\t<TD><INPUT TYPE=\"text\" NAME=\"place\" value= ");
+ out.println(place1); 
+      out.write(" ><BR></TD>\n");
       out.write("\t\t\t\t</TR>\n");
       out.write("\t\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("\t\t\t\t\t<TD><B><I>Date:</I></B></TD>\n");
-      out.write("\t\t\t\t\t<TD><INPUT TYPE=\"date\" NAME=\"timing\"></TD>\n");
+      out.write("\t\t\t\t\t<TD><INPUT TYPE=\"date\" NAME=\"timing\" value= ");
+ out.println(timing1); 
+      out.write("></TD>\n");
       out.write("\t\t\t\t</TR>\n");
       out.write("\t\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("\t\t\t\t\t<TD><B><I>Subject:</I></B></TD>\n");
-      out.write("\t\t\t\t\t<TD><INPUT TYPE=\"text\" NAME=\"subject\"></TD>\n");
+      out.write("\t\t\t\t\t<TD><INPUT TYPE=\"text\" NAME=\"subject\" value= ");
+ out.println(subject1); 
+      out.write("></TD>\n");
       out.write("\t\t\t\t</TR>\n");
       out.write("\t\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("\t\t\t\t\t<TD><B><I>Description:</I></B></TD>\n");
-      out.write("\t\t\t\t\t<TD><TEXTAREA style=\"resize:none;\" NAME=\"desc\"></TEXTAREA></TD>\n");
+      out.write("\t\t\t\t\t<TD><input type=\"text\" NAME=\"desc\" value= ");
+ out.println(desc1); 
+      out.write("></TEXTAREA></TD>\n");
       out.write("\t\t\t\t</TR>\n");
       out.write("\n");
       out.write("\t\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("\t\t\t\t<TD><B><I>Access:</I></B></TD>\n");
-      out.write("\t\t\t\t<TD>\n");
-      out.write("\t\t\t\t\t<select name=\"permitted\">\n");
-      out.write("\t\t\t\t\t\t<option value=\"2\">Private</option>\n");
-      out.write("\t\t\t\t    \t<option value=\"1\">Public</option>\n");
-      out.write("\t\t\t\t    \t");
- for (int i = 0; i < group_names.size(); i++) { 
-      out.write("\n");
-      out.write("\t\t\t\t    \t\t<option value=\"");
-      out.print(group_ids.get(i));
-      out.write('"');
-      out.write('>');
-      out.print(group_names.get(i));
-      out.write("</option>\n");
-      out.write("\t\t\t\t    \t");
- } 
-      out.write("\n");
-      out.write("\t\t\t\t\t</select>\n");
-      out.write("\t\t\t\t</TD>\n");
-      out.write("\t\t\t</TR>\n");
+      out.write("\t\t\t\t\t<TD><input type=\"text\" NAME=\"groupid\" value = ");
+ out.println(permitted1); 
+      out.write("></TD>\n");
+      out.write("\t\t\t\t</TR>\n");
       out.write("\t\t\t</TABLE>\n");
       out.write("\t\t</CENTER>\n");
       out.write("\n");

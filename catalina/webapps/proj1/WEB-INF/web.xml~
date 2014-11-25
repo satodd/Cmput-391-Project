@@ -7,6 +7,7 @@
 
     <servlet>
         <servlet-name>UploadImage</servlet-name>
+	<jsp-file>/jsp/upload.jsp</jsp-files>
         <servlet-class>UploadImage</servlet-class>
     </servlet>
     <servlet-mapping>

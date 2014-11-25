@@ -56,67 +56,77 @@ public final class photo_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
 
+	String username = (String)request.getSession().getAttribute("userName");
+	if (username == "failed" || username == "guest" || username == null){
+		out.println("<h1><CENTER>Unauthorized access</CENTER></H1>");
+	} else {
 	//CHECK FOR LOGIN
 	//String username = (String)request.getSession().getAttribute("userName");
-	String username = "Test2";
+	//String username = "Test";
 
-	String pid = request.getQueryString();
+		String pid = request.getQueryString();
 
-	// check if user is owner
-	boolean isOwner = true;
+		Connection conn = null;
+	    String driverName = "oracle.jdbc.driver.OracleDriver";
+	    String dbstring = "jdbc:oracle:thin:@gwynne.cs.ualberta.ca:1521:CRS";
+		Class drvClass = Class.forName(driverName); 
+		DriverManager.registerDriver((Driver)
+	    drvClass.newInstance());
 
-	Connection conn = null;
-    String driverName = "oracle.jdbc.driver.OracleDriver";
-    String dbstring = "jdbc:oracle:thin:@gwynne.cs.ualberta.ca:1521:CRS";
-	Class drvClass = Class.forName(driverName); 
-	DriverManager.registerDriver((Driver)
-    drvClass.newInstance());
+	    conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
+		conn.setAutoCommit(false);
+		
 
-    conn = DriverManager.getConnection(dbstring,"satodd","Edmonton01");
-	conn.setAutoCommit(false);
+		String sql = "SELECT * FROM images WHERE photo_id ='" + pid + "'";
 
-	String sql = "SELECT * FROM images WHERE photo_id ='" + pid + "'";
+		Statement stmt = null;
+		ResultSet rset = null;
 
-	Statement stmt = null;
-	ResultSet rset = null;
+		try{
+	        stmt = conn.createStatement();
+	        rset = stmt.executeQuery(sql);
+	    }
 
-	try{
-        stmt = conn.createStatement();
-        rset = stmt.executeQuery(sql);
-    }
+	    catch(Exception ex){
+	        out.println("<hr>" + ex.getMessage() + "<hr>");
+	    }
 
-    catch(Exception ex){
-        out.println("<hr>" + ex.getMessage() + "<hr>");
-    }
+	    if (rset == null || !rset.next()) return;
 
-    if (rset == null || !rset.next()) return;
+	    String owner = rset.getString(2);
+	    int permitted = rset.getInt(3);
+	    String subject = rset.getString(4);
+	    String place = rset.getString(5);
+	    String desc = rset.getString(7);
 
-    String owner = rset.getString(2);
-    int permitted = rset.getInt(3);
-    String subject = rset.getString(4);
-    String place = rset.getString(5);
-    String desc = rset.getString(7);
+	    String isOwner;
+		//check if user is owner
+	    if (username.equals(owner)){
+	    	isOwner = "true";
+		} else {isOwner = "false";}
 
-    sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
+		boolean isInGroup;
+	    //sql = "SELECT group_id, group_name FROM groups WHERE user_name='" + username + "'";
+	    sql = "Select groups.group_id, groups.group_name from groups, group_lists Where groups.group_id = group_lists.group_id AND group_lists.friend_id ='"+ username + "'";
 
-    try{
-        stmt = conn.createStatement();
-        rset = stmt.executeQuery(sql);
-    }
+	    try{
+	        stmt = conn.createStatement();
+	        rset = stmt.executeQuery(sql);
+	    }
 
-    catch(Exception ex){
-        out.println("<hr>" + ex.getMessage() + "<hr>");
-    }
+	    catch(Exception ex){
+	        out.println("<hr>" + ex.getMessage() + "<hr>");
+	    }
 
-    ArrayList<Integer> group_ids = new ArrayList<Integer>();
-    ArrayList<String> group_names = new ArrayList<String>();
+	    ArrayList<Integer> group_ids = new ArrayList<Integer>();
+	    ArrayList<String> group_names = new ArrayList<String>();
 
-    if (rset == null) return;
+	    if (rset == null) return;
 
-    while(rset.next()) {
-    	group_ids.add(rset.getInt(1));
-    	group_names.add(rset.getString(2));
-	}
+	    while(rset.next()) {
+	    	group_ids.add(rset.getInt(1));
+	    	group_names.add(rset.getString(2));
+		}
 
 
       out.write("\n");
@@ -133,13 +143,13 @@ public final class photo_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<header>\n");
       out.write("<h1>\n");
       out.write("<center>\n");
-      out.write("Image \n");
+      out.write("Hello ");
+      out.print(username);
+      out.write(" - Image \n");
       out.write("</center>\n");
       out.write("</h1>\n");
       out.write("</header>\n");
       out.write("<hr>\n");
-      out.write("\n");
-      out.write("<form name=\"upload-image\" method=\"POST\" enctype=\"multipart/form-data\" action=\"upload\">\n");
       out.write("\n");
       out.write("<table>\n");
       out.write("  <tr>\n");
@@ -147,11 +157,18 @@ public final class photo_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print(pid);
       out.write("\"/></td>\n");
       out.write("  </tr>\n");
-      out.write("\n");
- if(isOwner) { 
+ if(isOwner == "true") { 
       out.write("\n");
       out.write("\t<CENTER>\n");
+      out.write("\t\t<FORM NAME=\"Back\" ACTION=\"main.jsp\" METHOD=\"post\" ><CENTER>\n");
+      out.write("\t\t<FORM NAME=\"UpdateForum\" ACTION=\"updated.jsp\" METHOD=\"post\" ><CENTER>\n");
       out.write("\t\t<TABLE>\n");
+      out.write("\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
+      out.write("\t\t\t\t<TD><B><I>ID Number:</I></B></TD>\n");
+      out.write("\t\t\t\t<TD><INPUT TYPE=\"text\" NAME=\"imgid\" value=\"");
+      out.print(pid);
+      out.write("\" READONLY><BR></TD>\n");
+      out.write("\t\t\t</TR>\n");
       out.write("\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
       out.write("\t\t\t\t<TD><B><I>Place:</I></B></TD>\n");
       out.write("\t\t\t\t<TD><INPUT TYPE=\"text\" NAME=\"place\" value=\"");
@@ -193,31 +210,49 @@ public final class photo_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t    \t");
  } 
       out.write("\n");
-      out.write("\t\t\t\t\t\t<!-- \n");
-      out.write("\t\t\t\t\t\teach(group)\n");
-      out.write("\t\t\t\t\t\t\t<option value=\"{{group.id}}\">{{group.name}}</option>\n");
-      out.write("\t\t\t\t\t\t-->\n");
       out.write("\t\t\t\t\t</select>\n");
       out.write("\t\t\t\t</TD>\n");
       out.write("\t\t\t</TR>\n");
       out.write("\t\t</TABLE>\n");
       out.write("\t</CENTER>\n");
- } else { 
-      out.write('\n');
-      out.write('	');
-      out.write('\n');
+      out.write("    <INPUT TYPE=\"submit\" NAME=\"OK\" VALUE=\"OK\">\n");
+      out.write("    <INPUT TYPE=\"submit\" NAME=\"main\" VALUE=\"Main\">\n");
+      out.write("\t\n");
+} else { 
+      out.write("\n");
+      out.write("\n");
+      out.write("\t<CENTER>\n");
+      out.write("\t\t<TABLE>\n");
+      out.write("\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
+      out.write("\t\t\t\t<TD><B><I>Place:</I></B></TD>\n");
+      out.write("\t\t\t\t<TD><NAME=\"place\" value=\"");
+      out.print(place);
+      out.write("\"><BR></TD>\n");
+      out.write("\t\t\t</TR>\n");
+      out.write("\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
+      out.write("\t\t\t\t<TD><B><I>Date:</I></B></TD>\n");
+      out.write("\t\t\t\t<TD><NAME=\"timing\"></TD>\n");
+      out.write("\t\t\t</TR>\n");
+      out.write("\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
+      out.write("\t\t\t\t<TD><B><I>Subject:</I></B></TD>\n");
+      out.write("\t\t\t\t<TD><NAME=\"subject\" value=\"");
+      out.print(subject);
+      out.write("\"></TD>\n");
+      out.write("\t\t\t</TR>\n");
+      out.write("\t\t\t<TR VALIGN=TOP ALIGN=CENTER>\n");
+      out.write("\t\t\t\t<TD><B><I>Description:</I></B></TD>\n");
+      out.write("\t\t\t\t<TD><NAME=\"desc\" value=\"");
+      out.print(desc);
+      out.write("\"></TD>\n");
+      out.write("\t\t\t</TR>\n");
+      out.write("\t\t</TABLE>\n");
+      out.write("\t</CENTER>\n");
  } 
-      out.write("\n");
-      out.write("\n");
-      out.write("\t\t\n");
-      out.write("\n");
-      out.write("\t  <tr>\n");
-      out.write("    <td ALIGN=CENTER COLSPAN=\"2\"><input type=\"submit\" name=\".submit\" \n");
-      out.write("     value=\"OK\"></td>\n");
-      out.write("  </tr>\n");
       out.write("\n");
       out.write("\t</body>\n");
       out.write("</HTML>\n");
+}
+      out.write('\n');
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

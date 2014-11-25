@@ -10,7 +10,7 @@ DROP TABLE group_lists;
 DROP TABLE groups;
 DROP TABLE persons;
 DROP TABLE users;
-
+DROP TABLE user_views;
 
 CREATE TABLE users (
    user_name varchar(24),
@@ -71,3 +71,13 @@ CREATE TABLE images (
 );
 
 CREATE SEQUENCE pic_id_sequence;
+
+CREATE TABLE user_views (
+   photo_id    int,
+   views   int,
+   date_viewed date,
+   primary key(photo_id)
+);
+
+
+

@@ -1,9 +1,11 @@
 <%
 	String username = (String)request.getSession().getAttribute("userName");
+	String query = (String)request.getSession().getAttribute("imageView");
 	if (username == "failed" || username == "guest" || username == null){
 		out.println("<h1><CENTER>Unauthorized access</CENTER></H1>");
 	}
-else{
+
+else {
 %>
 
 <HTML>

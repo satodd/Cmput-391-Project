@@ -51,19 +51,25 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out = pageContext.getOut();
       _jspx_out = out;
 
-      out.write("<HTML>\r\n");
-      out.write("<HEAD>\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<TITLE>Your Login Result</TITLE>\r\n");
-      out.write("</HEAD>\r\n");
-      out.write("\r\n");
-      out.write("<BODY>\r\n");
-      out.write("<!--A simple example to demonstrate how to use JSP to \r\n");
-      out.write("    connect and query a database. \r\n");
-      out.write("    @author  Hong-Yu Zhang, University of Alberta\r\n");
-      out.write(" -->\r\n");
-      out.write("\r\n");
+
+
+    String name = request.getParameter( "USERID" );
+    session.setAttribute( "userName", name );
+
+      out.write("\n");
+      out.write("\n");
+      out.write("<HTML>\n");
+      out.write("<HEAD>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<TITLE>Your Login Result</TITLE>\n");
+      out.write("</HEAD>\n");
+      out.write("<BODY>\n");
+      out.write("<!--A simple example to demonstrate how to use JSP to \n");
+      out.write("    connect and query a database. \n");
+      out.write("    @author  Hong-Yu Zhang, University of Alberta\n");
+      out.write(" -->\n");
+      out.write("\n");
  
 
         if(request.getParameter("Submit") != null)
@@ -72,8 +78,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 	        //get the user input from the login page
         	String userName = (request.getParameter("USERID")).trim();
 	        String passwd = (request.getParameter("PASSWD")).trim();
-        	out.println("<p>Your input User Name is "+userName+"</p>");
-        	out.println("<p>Your input password is "+passwd+"</p>");
+            String what = "dfd";
 
 
 	        //establish the connection to the underlying database
@@ -109,7 +114,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 	        ResultSet rset = null;
         	String sql = "select password from users where user_name = '"+userName+"'";
 		//String sql = "select * from login";
-	        out.println(sql);
+
         	try{
 	        	stmt = conn.createStatement();
 		        rset = stmt.executeQuery(sql);
@@ -125,17 +130,24 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
 	        	truepwd = (rset.getString(1)).trim();
 	
         	//display the result
-	        if(passwd.equals(truepwd))
+	        if(passwd.equals(truepwd) && truepwd != ""){
 		        out.println("<p><b>Your Login is Successful!</b></p>");
-        	else
+                String redirectURL = "main.jsp";
+                response.sendRedirect(redirectURL);
+            }
+        	else{
+                session.setAttribute( "userName", "failed" );
 	        	out.println("<p><b>Either your userName or Your password is inValid!</b></p>");
+                String redirectURL = "loginScreen.jsp";
+                response.sendRedirect(redirectURL);
+                }   
 
-                try{
-                        conn.close();
-                }
-                catch(Exception ex){
-                        out.println("<hr>" + ex.getMessage() + "<hr>");
-                }
+            try{
+                    conn.close();
+            }
+            catch(Exception ex){
+                    out.println("<hr>" + ex.getMessage() + "<hr>");
+            }
         }
         else
         {
@@ -146,13 +158,13 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
                 out.println("</form>");
         }      
 
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("</BODY>\r\n");
-      out.write("</HTML>\r\n");
-      out.write("\r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("</BODY>\n");
+      out.write("</HTML>\n");
+      out.write("\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

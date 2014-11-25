@@ -1,5 +1,6 @@
-<%@ page import="java.sql.*" %>
-
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import = "java.util.stream.*"%>
 <%
     String username = (String)request.getSession().getAttribute("userName");
     if (username == "failed" || username == "guest" || username == null){
@@ -40,7 +41,13 @@ else{
             gTemp = gTemp.replace(" ", "");
             gTemp = gTemp.replace(","+username,"");
             gTemp = gTemp.concat(","+username);
-            String [] gMem = gTemp.split(",");
+            gTemp = gTemp.concat(",admin");
+            String [] gMemTemp = gTemp.split(",");
+            Set<String> stringSet = new HashSet<String>(Arrays.asList(gMemTemp));
+            String [] gMem = stringSet.toArray(new String[0]);
+
+
+
 
 
 /*
@@ -208,7 +215,7 @@ else{
                 out.println("<form method=groupNotes action=notes.jsp>");
 
                 //Creates Grouplist item for valid users
-                if(val != 0){
+                if(val != 0 && !gMem[i].equals("admin")){
                     outc = Integer.toString(count);
                     out.println("<p>"+gMem[i]+" has been added to the group add user notes below</p>");
                     stmt = null;
@@ -220,7 +227,7 @@ else{
                     out.println("<TD><B><I>Member Name:</I></B></TD>");
                     out.println("<TD><INPUT TYPE=text NAME=MEMBNAME"+outc+" input value="+gMem[i]+" readonly><BR></TD>");
 
-                    out.println("<TD><B><I>Notes:</I></B></TD>");
+                    out.println("<TD><B><I>Notice:</I></B></TD>");
                     out.println("<TD><INPUT TYPE=text NAME=MemNote"+outc+"><BR></TD>");
                     count = count +1;
 
@@ -238,9 +245,23 @@ else{
 
 
                 }
+                else if (gMem[i].equals("admin")){
+                    String sql5 = "INSERT INTO group_lists VALUES("+max_gid+",'"+gMem[i]+"',sysdate,null)";
+
+                    try{
+                        stmt = conn.createStatement();
+                        rset = stmt.executeQuery(sql5);
+                        conn.commit();
+                    }
+                    catch(Exception ex){
+                        out.println("<hr>test6" + ex.getMessage() + "<hr>");
+                    }
+
+
+                }
                 else{
                     out.println("<p>"+gMem[i]+" Is not a valid user</p>");
-                }
+            }
             }
 
         try{
